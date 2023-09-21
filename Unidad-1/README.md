@@ -12,7 +12,7 @@ mayor y escribirlo.
 
 ### Diagrama de Flujo
 
-<img src="img/Diagramas-flujo-Ej-1a.drawio.png">
+<img src="img/Diagramas-flujo-Ej1a.drawio.png">
 
 ### Pseudocódigo
 
