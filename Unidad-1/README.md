@@ -11,6 +11,8 @@ mayor y escribirlo.
 
 ### Diagrama de Flujo
 
+<img src="img/Diagramas%20de%20flujo%20Ej%201a.drawio.png">
+
 
 
 </div>
