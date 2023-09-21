@@ -66,6 +66,37 @@ Desarrolle un algoritmo que permita leer tres valores y almacenarlos en las vari
 
 - Escribir __C “Es el mayor”__
 
+- Fin_Si
+
+- Fin_Si
+
 - Fin
+
+## Ejercicio 3 <a name="ejercicio3"></a>
+
+Desarrolle un algoritmo que realice la sumatoria de los números enteros comprendidos entre el 1 y el 10, es decir, 1 + 2 + 3 + .... + 10.
+
+### Diagrama de Flujo
+<img src="img/Diagrama-flujo-Ej3.drawio.png">
+
+- Inicio
+
+- Declaración de variables: N= 0, Suma = 0
+
+- Asignación Contador: N=N+1
+
+- Asignación Acumulador: Suma = Suma + N
+
+- Si N = 10 Entonces
+
+- Escribir Suma
+
+- De lo contrario, Repetir desde el paso 3
+
+- Fin_Si
+
+- Fin
+
+
 
 </div>
