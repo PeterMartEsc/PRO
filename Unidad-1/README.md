@@ -5,6 +5,7 @@
 - [Ejercicio 1](#ejercicio1)
 - [Ejercicio 2](#ejercicio2)
 - [Ejercicio 3](#ejercicio3)
+- [Ejercicio 4](#ejercicio4)
 
 ## Ejercicio 1 <a name="ejercicio1"></a>
 
@@ -13,7 +14,7 @@ mayor y escribirlo.
 
 ### Diagrama de Flujo
 
-<img src="img/Diagramas-flujo-Ej1a.drawio.png">
+<img src="img/Diagramas-flujo-Ej1a.drawio.png"> 
 
 ### Pseudocódigo
 
@@ -79,27 +80,53 @@ Desarrolle un algoritmo que realice la sumatoria de los números enteros compren
 
 ### Diagrama de Flujo
 
-<img src="img/Diagrama-flujo-Ej3.drawio.png">
+<img src="img/Diagrama-flujo-Ej3.drawio.png"> 
 
 ### Pseudocódigo
 
 - Inicio
 
-- Declaración de variables: N= 0, Suma = 0
+- Declaración de variables: __N= 0, Suma = 0__
 
-- Asignación Contador: N=N+1
+- Asignación Contador: __N=N+1__
 
-- Asignación Acumulador: Suma = Suma + N
+- Asignación Acumulador: __Suma = Suma + N__
 
-- Si N = 10 Entonces
+- Si __N = 10__ Entonces
 
-- Escribir Suma
+- Escribir __Suma__
 
-- De lo contrario, Repetir desde el paso 3
+- De lo contrario, Repetir desde el __paso 3__
 
 - Fin_Si
 
 - Fin
+
+## Ejercicio 4 <a name="ejercicio4"></a>
+
+Determinar la hipotenusa de un triángulo rectángulo conocidas las longitudes de sus dos catetos. Desarrolle el algoritmo correspondiente.
+
+### Diagrama de Flujo
+
+<img src="img/Diagramas-flujo-Ej4.drawio.png">
+
+### Pseudocódigo
+
+- Inicio
+
+- Declaración de Variables: __CatA= 0, CatB=0__
+
+- Leer el valor de cada __cateto__
+
+- Almacenarlo en la variable __CatA y CatB__
+
+- Calcular el valor de __Hip__ con la __formula indicada__
+
+- Escribir el valor de la __Hipotenusa__ 
+
+- Fin
+
+## Ejercicio 5 <a name="ejercicio5"></a>
 
 
 
