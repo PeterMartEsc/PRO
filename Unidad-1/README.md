@@ -126,8 +126,5 @@ Determinar la hipotenusa de un triángulo rectángulo conocidas las longitudes d
 
 - Fin
 
-## Ejercicio 5 <a name="ejercicio5"></a>
-
-
 
 </div>
