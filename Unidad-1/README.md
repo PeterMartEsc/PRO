@@ -42,7 +42,7 @@ Desarrolle un algoritmo que permita leer tres valores y almacenarlos en las vari
 
 ### Diagrama de Flujo
 
-<img src="img/Diagramas-flujo-Ej2.drawio.png">
+<img src="images/Diagramas-flujo-Ej2.drawio.png">
 
 ### Pseudocódigo
 
@@ -80,7 +80,7 @@ Desarrolle un algoritmo que realice la sumatoria de los números enteros compren
 
 ### Diagrama de Flujo
 
-<img src="img/Diagrama-flujo-Ej3.drawio.png"> 
+<img src="images/Diagrama-flujo-Ej3.drawio.png"> 
 
 ### Pseudocódigo
 
@@ -108,7 +108,7 @@ Determinar la hipotenusa de un triángulo rectángulo conocidas las longitudes d
 
 ### Diagrama de Flujo
 
-<img src="img/Diagramas-flujo-Ej4.drawio.png">
+<img src="images/Diagramas-flujo-Ej4.drawio.png">
 
 ### Pseudocódigo
 
