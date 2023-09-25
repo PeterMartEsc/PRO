@@ -1,4 +1,4 @@
-package ies.puerto;
+package ies.puerto.Ejercicio1;
 
 import java.util.Scanner;
 

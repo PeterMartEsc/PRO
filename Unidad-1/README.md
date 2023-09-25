@@ -14,7 +14,7 @@ mayor y escribirlo.
 
 ### Diagrama de Flujo
 
-<img src="img/Diagramas-flujo-Ej1a.drawio.png"> 
+<img src="images/Diagramas-flujo-Ej1a.drawio.png"> 
 
 ### Pseudocódigo
 
