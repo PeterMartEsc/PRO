@@ -14,7 +14,7 @@ mayor y escribirlo.
 
 ### Diagrama de Flujo
 
-<img src="images/Diagramas-flujo-Ej1a.drawio.png"> 
+<img src="Ejercicio1clase/images/Diagramas-flujo-Ej1a.drawio.png"> 
 
 ### Pseudocódigo
 
@@ -42,7 +42,7 @@ Desarrolle un algoritmo que permita leer tres valores y almacenarlos en las vari
 
 ### Diagrama de Flujo
 
-<img src="images/Diagramas-flujo-Ej2.drawio.png">
+<img src="Ejercicio1clase/images/Diagramas-flujo-Ej2.drawio.png">
 
 ### Pseudocódigo
 
@@ -80,7 +80,7 @@ Desarrolle un algoritmo que realice la sumatoria de los números enteros compren
 
 ### Diagrama de Flujo
 
-<img src="images/Diagrama-flujo-Ej3.drawio.png"> 
+<img src="Ejercicio1clase/images/Diagrama-flujo-Ej3.drawio.png"> 
 
 ### Pseudocódigo
 
@@ -108,7 +108,7 @@ Determinar la hipotenusa de un triángulo rectángulo conocidas las longitudes d
 
 ### Diagrama de Flujo
 
-<img src="images/Diagramas-flujo-Ej4.drawio.png">
+<img src="Ejercicio1clase/images/Diagramas-flujo-Ej4.drawio.png">
 
 ### Pseudocódigo
 
