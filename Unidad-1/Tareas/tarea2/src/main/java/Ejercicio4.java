@@ -4,7 +4,7 @@ import java.util.Scanner;
  * @author PeterMartEsc
  * Ejercicio numero 2
  */
-public class Ejercicio2 {
+public class Ejercicio4 {
 
     /**
      * Descripcion del algoritmo
