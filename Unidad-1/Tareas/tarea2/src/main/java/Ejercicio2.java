@@ -32,17 +32,32 @@ public class Ejercicio2 {
             valorC = lectura.nextInt();
             System.out.println("Valor de la variable C = "+valorC);
 
-        } while (valorA == valorB && valorB == valorC);
+            if((valorA == valorB) || (valorA == valorC) || (valorB == valorC)) {
+                System.out.println("Dos o más valores son iguales");
+            }
+
+        } while ((valorA == valorB) || (valorA == valorC) || (valorB == valorC));
 
         if(valorA>valorB && valorA>valorC){
-            System.out.println("EL valor de A es el mayor");
-        } else {
-            if(valorB>valorA && valorB>valorC){
-                System.out.println("EL valor de B es el mayor");
-            } else {
-                System.out.println("El valor de C es el mayor");
-            }
-        }
+                System.out.println("EL valor de A es el mayor");
+                if(valorC<valorB){
+                System.out.println("El valor C es el menor");
+                } else
+                    System.out.println("Valor B es el menor");
 
+        } else if(valorB>valorA && valorB>valorC){
+                System.out.println("El valor de B es el mayor");
+                if(valorA<valorC){
+                    System.out.println("El valor A es el menor");
+                } else
+                    System.out.println("Valor C es el menor");
+
+        } else {
+                System.out.println("El valor de C es el mayor");
+                if(valorA<valorB){
+                    System.out.println("El valor A es el menor");
+                } else
+                    System.out.println("Valor B es el menor");
+        }
     }
 }
