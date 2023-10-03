@@ -12,7 +12,7 @@ Desarrolle un algoritmo que permita calcular Promedio de Notas; finaliza cuando 
 
 ## Diagrama <a name="diagrama"></a>
 
-<img src=""/>
+<img src="../images/diagramaTarea1.png"/>
 
 ## Pseudocodigo <a name="pseudocodigo"></a>
 
