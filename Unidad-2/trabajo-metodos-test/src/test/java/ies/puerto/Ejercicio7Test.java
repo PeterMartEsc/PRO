@@ -16,7 +16,7 @@ public class Ejercicio7Test {
         verificarDiaSemana("Viernes", 5);
         verificarDiaSemana("Sabado", 6);
         verificarDiaSemana("Domingo", 7);
-        verificarDiaSemana("No es un día de la semana", 8);
+        verificarDiaSemana("No es un dia de la semana", 8);
 
         verificarDiaSemana("No es un dia de la semana", 11);
 

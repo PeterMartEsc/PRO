@@ -14,8 +14,10 @@ public class Ejercicio2Test {
     @Test
     public void calcularCirculo() {
         int radio = 3;
-        double resultadoOk = 0;
+        double resultadoOk = 28.274333882308138;
         double resultado = ejercicio2.areaCirculo(radio);
         Assertions.assertEquals(resultadoOk, resultado, "No se ha obtenido el resultado esperado");
     }
+
+
 }
