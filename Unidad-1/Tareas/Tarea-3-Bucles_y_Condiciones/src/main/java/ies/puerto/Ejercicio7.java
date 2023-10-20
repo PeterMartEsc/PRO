@@ -1,17 +1,12 @@
 package ies.puerto;
 
-/**
- * @author PeterMartEsc
- * Entrega tarea 3
- */
+import java.util.Scanner;
 
 /**
  * Imprimir el nombre del día de la semana correspondiente a un número ingresado por el usuario utilizando una estructura switch.
  * El día a verificar se debe de pedir por teclado.
+ * @author PeterMartEsc
  */
-
-import java.util.Scanner;
-
 public class Ejercicio7 {
 
     public static void main(String[] args) {
