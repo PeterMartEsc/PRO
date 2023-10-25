@@ -2,9 +2,19 @@ package ies.puerto;
 
 public class Ejercicio2 {
 
-    public int tipoNumero(int numero){
+    public String tipoNumero(int numero){
 
-        int resultado = 0;
+        String resultado = "El numero es negativo";
+
+        if (numero >= 0){
+            resultado = "El numero es positivo";
+        }
+
+        if (numero%2 == 0){
+            resultado += " y par";
+        } else {
+            resultado += " e impar";
+        }
 
         return resultado;
     }

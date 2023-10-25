@@ -9,10 +9,24 @@ public class Ejercicio2Test {
     @Test
     public void tipoNumeroOkTest(){
 
-        int resultado = ejercicio2.tipoNumero(-12);
+        int numero = -12;
 
-        Assertions.assertEquals();
+        String resultado = ejercicio2.tipoNumero(numero);
+
+        Assertions.assertEquals("El numero es negativo y par", resultado, "No se ha obtenido el resultado esperado");
 
     }
+
+    @Test
+    public void tipoNumeroPositivoTest(){
+
+        int numero = 345;
+
+        String resultado = ejercicio2.tipoNumero(345);
+
+        Assertions.assertEquals("El numero es positivo e impar", resultado, "No se ha obtenido el resultado esperado");
+
+    }
+
 
 }
