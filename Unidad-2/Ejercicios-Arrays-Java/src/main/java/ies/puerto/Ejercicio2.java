@@ -1,4 +1,4 @@
-package org.example;
+package ies.puerto;
 
 public class Ejercicio2 {
     public float promedioArray (float[] array) {

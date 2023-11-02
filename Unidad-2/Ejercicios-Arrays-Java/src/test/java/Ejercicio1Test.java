@@ -1,4 +1,4 @@
-import org.example.Ejercicio1;
+import ies.puerto.Ejercicio1;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
