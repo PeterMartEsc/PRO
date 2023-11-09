@@ -1,6 +1,6 @@
 package ies.puerto;
 
-public class Ejercicio4 {
+public class Rectángulo {
     public static void main(String[] args) {
 
 
