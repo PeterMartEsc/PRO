@@ -4,18 +4,18 @@ import java.util.Scanner;
 
 public class Ejercicio3 {
 
-    public static void calcularNota() {
+    public static void main (String[]args){
 
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Ingrese su nota: ");
-        float nota = scanner.nextInt();
+        float nota = scanner.nextFloat();
 
-        String evaluacion;
+        String evaluacion = "Por definir";
 
-        if (nota <= 4.99 && nota >= 0) {
+        if (nota >= 0 && nota <= 4.99) {
             evaluacion = "Suspenso";
-        } else if (nota >=5 && nota <=6) {
+        } else if (nota >=5 && nota <=5.99) {
             evaluacion = "Aprobado";
         } else if (nota >= 6 && nota <= 6.99) {
             evaluacion = "Bien";
@@ -25,7 +25,12 @@ public class Ejercicio3 {
             evaluacion = "Sobresaliente";
         } else if (nota == 10) {
             evaluacion = "Matrícula";
-        } else
+        } else {
             System.out.println("Introduzca un valor entre 0 y 10");
+        }
+
+        System.out.println("Tu evaluacion: " + evaluacion);
     }
+
+
 }
