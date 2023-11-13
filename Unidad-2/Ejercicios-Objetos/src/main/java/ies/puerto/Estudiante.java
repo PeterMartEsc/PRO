@@ -1,7 +1,8 @@
 package ies.puerto;
 
-public class Main {
+public class Estudiante {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+
     }
 }

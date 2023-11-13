@@ -1,7 +1,7 @@
 package ies.puerto;
 
 /**
- * @author Peter Mart Esc
+ * @author PeterMartEsc
  */
 
 public class Persona {
@@ -23,37 +23,12 @@ public class Persona {
     }
 
     /**
-     * Constructor con el parámetro nombre
-     * @param nombre de la persona
-     */
-
-    public Persona (String nombre){
-        this.nombre = nombre;
-    }
-
-    /**
-     * Constructor de la clase con el nombre y la edad
-     * @param nombre de la persona
-     * @param edad de la persona
-     */
-    public Persona (String nombre, int edad){
-
-        this.nombre = nombre;
-        this.edad = edad;
-
-    }
-
-    /**
      * Constructor de la clase de la persona
      * @param nombre de la persona
      * @param edad de la persona
      * @param email de la persona
+     * @param telefono de la persona
      */
-    public Persona (String nombre, int edad, String email ){
-        this.nombre = nombre;
-        this.edad = edad;
-        this.email = email;
-    }
 
     public Persona (String nombre, int edad, String email, int telefono){
         this.nombre = nombre;
@@ -61,7 +36,6 @@ public class Persona {
         this.email = email;
         this.telefono = telefono;
     }
-
 
     /**
      *Getters/Setters de la clase
@@ -79,14 +53,26 @@ public class Persona {
         this.edad = edad;
     }
 
-    public void imprimir (){
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+
+    /**
+     * Método para devolver los datos en formato de lista
+     */
+    public void imprimirLista (){
         System.out.println("Nombre:" + nombre);
         System.out.println("Edad:"+ edad);
         System.out.println("Email" + email);
         System.out.println("Telefono:" + telefono);
     }
 
-    public String imprimir(){
+    /**
+     * Método para devolver los datos en formato línea.
+     * @return
+     */
+
+    public String imprimirLinea(){
         return "Nombre:" + nombre + "Edad" + edad + "Email" + email + "Telefono" + telefono;
     }
 
