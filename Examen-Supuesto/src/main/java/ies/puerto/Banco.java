@@ -12,6 +12,9 @@ public class Banco {
     private String titular;
     private double saldo;
 
+    public Banco() {
+    }
+
     /**
      * Primer constructor
      * @param titular de la cuenta bancaria

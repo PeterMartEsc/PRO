@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44f9d895-aad6-4ae9-a6db-bd92f523725d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Tareas/Tarea-1-entrega/Tarea-1/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tareas/Tarea-1-entrega/Tarea-1/src/main/java/ies/iespuerto/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tareas/Tarea-1-entrega/Tarea-1/src/main/java/ies/iespuerto/Codigo_tarea1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tareas/tarea2/src/main/java/Ejercicio2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tareas/tarea2/src/main/java/Ejercicio2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tareas/tarea2/src/main/java/Ejercicio3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tareas/tarea2/src/main/java/Ejercicio3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tareas/tarea2/src/main/java/Ejercicio8.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tareas/tarea2/src/main/java/Ejercicio8.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tareas/tarea2/target/classes/Ejercicio3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Tareas/tarea2/target/classes/Ejercicio3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Unidad-2/Ejercicios-Objetos/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Unidad-2/Ejercicios-Objetos/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,11 +13,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2WDDxVwhlS7b48v6lVebPpr73Z8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,7 +28,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/dam/PeterMartEsc/PROGRAMACION/PRO/Unidad-1/Ejercicio1clase"
+    "last_opened_file_path": "/home/dam/PeterMartEsc/PROGRAMACION/PRO/Unidad-1/Practica en clase/Ejercicio1clase"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

@@ -17,7 +17,7 @@ public class Ejercicio3 {
         float nota = scanner.nextFloat();
 
         System.out.println("Su evaluacion calculada por If/Else es: " +calcularNotaIfElse(nota) );
-
+        System.out.println("Su evaluación calculada por Switch es: " +calcularNotaSwitch(nota));
     }
 
     public static String calcularNotaIfElse (float nota){
@@ -43,5 +43,26 @@ public class Ejercicio3 {
         return evaluacion;
     }
 
+    public static String calcularNotaSwitch (float nota){
 
+        String evaluacion = "Suspenso";
+
+        switch((int) nota){
+            case 5:
+                evaluacion = "Aprobado";
+            case 6:
+                evaluacion = "Bien";
+            case 7:
+                evaluacion = "Notable";
+            case 8:
+                evaluacion = "Notable";
+            case 9:
+                evaluacion = "Sobrealiente";
+            case 10:
+                evaluacion = "Matricula";
+            default:
+                evaluacion = "Por definir";
+        }
+        return evaluacion;
+    }
 }
