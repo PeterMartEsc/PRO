@@ -1,6 +1,6 @@
 package ies.puerto;
 
-public class Ejercicio1 {
+public class Ejercicio1Break {
 
     /**
      * Escribe un programa que encuentre el primer número divisible por 7 y 5 entre 1 y 100 (inclusive), utilizando break

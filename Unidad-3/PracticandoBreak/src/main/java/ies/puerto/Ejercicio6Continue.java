@@ -1,0 +1,6 @@
+package ies.puerto;
+
+public class Ejercicio6Continue {
+
+
+}

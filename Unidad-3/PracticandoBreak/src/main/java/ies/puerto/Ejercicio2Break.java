@@ -1,6 +1,6 @@
 package ies.puerto;
 
-public class Ejercicio2 {
+public class Ejercicio2Break {
 
     /**
      * Escribe un programa que encuentre el primer número primo mayor que 100 , utilizando break

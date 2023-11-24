@@ -1,6 +1,6 @@
 package ies.puerto;
 
-public class Ejercicio3 {
+public class Ejercicio3Break {
 
     public static void main(String[] args) {
 
