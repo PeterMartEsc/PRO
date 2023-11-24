@@ -17,3 +17,7 @@ public class Ejercicio1 {
 
     }
 }
+
+/*
+  Se puede mejorar usando un boolean haciendo otra función
+ */
