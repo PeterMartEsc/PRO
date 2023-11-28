@@ -1,5 +1,9 @@
 package ies.puerto;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+
 public class Ejercicio5 {
 
     /**
@@ -8,12 +12,17 @@ public class Ejercicio5 {
      * @param args
      */
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-        String String = "abc";
-        String suma;                /*Solo me deja creandola como int*/
+       Scanner scanner = new Scanner(System.in);
+       try{
+           System.out.println("Ingresa una operación matemática");
+           int operacion = scanner.nextInt();
 
-        suma = (2+String);
-        System.out.println(suma);
+       } catch (InputMismatchException exception){
+           throw new Exception("El tipo de entrada no se corresponde con el tipo de dato esperando, imposible realizar una operación matemática en un scaner");
+          /* falta */
+       }
+
     }
 }

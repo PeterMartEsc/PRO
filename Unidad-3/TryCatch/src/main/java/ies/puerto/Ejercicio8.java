@@ -20,7 +20,7 @@ public class Ejercicio8 {
             System.out.println("Resultado: " +division);
 
         } catch(InputMismatchException inputMismatchException){
-            System.out.println("El dato introducido no es un número" +inputMismatchException);
+            System.out.println("El dato introducido no es un número");
         }
 
     }

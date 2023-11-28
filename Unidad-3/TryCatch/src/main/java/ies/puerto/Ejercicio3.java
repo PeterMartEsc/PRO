@@ -7,10 +7,10 @@ public class Ejercicio3 {
         int[]array = {1,2,3};
 
         try{
-            System.out.println("" +array[3]);
+            System.out.println(array[3]);
 
         } catch(ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException){
-            System.out.println("El tamaño del array es de 3 números: " + arrayIndexOutOfBoundsException.getMessage());
+            System.out.println("El tamaño del array es de 3 números: ");
         }
     }
 }

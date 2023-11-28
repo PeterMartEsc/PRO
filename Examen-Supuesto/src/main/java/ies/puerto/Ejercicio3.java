@@ -45,34 +45,23 @@ public class Ejercicio3 {
 
     public static String calcularNotaSwitch (float nota){
 
-        String evaluacion = "Por definir";
+        String evaluacion = "Suspenso";
 
-        int enteroNota = (int) nota;
-
-        switch(enteroNota){
-            case 0:
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-                evaluacion = "Suspenso";
-                break;
+        switch((int) nota){
             case 5:
                 evaluacion = "Aprobado";
-                break;
             case 6:
                 evaluacion = "Bien";
-                break;
             case 7:
+                evaluacion = "Notable";
             case 8:
                 evaluacion = "Notable";
-                break;
             case 9:
                 evaluacion = "Sobrealiente";
-                break;
             case 10:
                 evaluacion = "Matricula";
-                break;
+            default:
+                evaluacion = "Por definir";
         }
         return evaluacion;
     }
