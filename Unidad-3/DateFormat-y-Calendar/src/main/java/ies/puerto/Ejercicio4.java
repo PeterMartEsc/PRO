@@ -6,7 +6,6 @@ public class Ejercicio4 {
 
     public static void main(String[] args) {
 
-        // Obtener una instancia de Calendar representando el momento actual
         Calendar calendar = Calendar.getInstance();
 
         calendar.set(Calendar.DATE, calendar.get(Calendar.DATE)+10);
