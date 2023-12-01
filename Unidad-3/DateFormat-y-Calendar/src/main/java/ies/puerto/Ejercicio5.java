@@ -15,7 +15,7 @@ public class Ejercicio5 {
         int mes = calendar.get(Calendar.MONTH) + 1; //Meses comienzan desde 0
         int dia = calendar.get(Calendar.DAY_OF_MONTH);
 
-        System.out.println("Fecha hace dos meses: ");
+        System.out.println("Fecha hace dos meses: " +dia+ "-" +mes+ "-" +anio);
     }
 
 }
