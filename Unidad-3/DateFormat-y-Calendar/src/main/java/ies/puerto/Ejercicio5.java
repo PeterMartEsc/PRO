@@ -9,12 +9,13 @@ public class Ejercicio5 {
         //Necesario, instancia
         Calendar calendar = Calendar.getInstance();
 
+        calendar.set(Calendar.MONTH, calendar.get(Calendar.MONTH)-2);
+
         int anio = calendar.get(Calendar.YEAR);
         int mes = calendar.get(Calendar.MONTH) + 1; //Meses comienzan desde 0
         int dia = calendar.get(Calendar.DAY_OF_MONTH);
 
-        System.out.println("La fecha actual es: " +dia+ "-" +mes+ "-" +anio);
-        System.out.println("La fecha hace dos meses fué: ");
+        System.out.println("Fecha hace dos meses: ");
     }
 
 }
