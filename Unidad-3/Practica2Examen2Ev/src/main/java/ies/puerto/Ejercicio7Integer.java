@@ -13,7 +13,5 @@ public class Ejercicio7Integer {
 
         System.out.println("Su número en binario es: " +numBinario);
 
-
-
     }
 }
