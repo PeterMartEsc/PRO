@@ -10,7 +10,12 @@ public class Rectangulo extends Figura{
     }
 
     @Override
+    @Deprecated(since = "4.5", forRemoval = true)
     public float calcularArea() {
+        return area();
+    }
+
+    public float area(){
         return getBase()*getAltura();
     }
 

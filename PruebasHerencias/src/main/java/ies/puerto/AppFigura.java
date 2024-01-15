@@ -16,6 +16,7 @@ public class AppFigura {
         rectangulo = new Rectangulo(4f, 3f);
         System.out.println("Valor rectangulo: " +rectangulo);
         mostrarArea(rectangulo);
+        System.out.println("Valor de mi area rectangulo: "+rectangulo.area());
     }
 
     public static void mostrarArea(Figura figura){
