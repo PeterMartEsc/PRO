@@ -1,6 +1,6 @@
 package ies.puerto;
 
-public class Cuadrado extends Figura {
+public class Cuadrado extends Rectangulo {
 
     public Cuadrado(){}
 
@@ -9,13 +9,8 @@ public class Cuadrado extends Figura {
     }
 
     @Override
-    public float calcularArea(){
-        return getBase()*getAltura();
-    }
-
-    @Override
     public String toString(){
-        return "base: "+getBase()+", altura: "+getAltura();
+        return "Base: "+getBase()+", Altura: "+getAltura();
     }
 
 }
