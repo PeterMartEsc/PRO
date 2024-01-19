@@ -1,9 +1,17 @@
 package ies.puerto.abstrac.Persona;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public abstract class PersonaAbstract {
 
     public String nombre;
     public String fechaNacimiento;
+
+
+    public PersonaAbstract() {
+    }
 
     public PersonaAbstract(String nombre, String fechaNacimiento) {
         this.nombre = nombre;
@@ -26,6 +34,17 @@ public abstract class PersonaAbstract {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public abstract String anio (String anio);
+    public int calcularEdad () throws ParseException {
+
+        SimpleDateFormat formatoFecha = new SimpleDateFormat("dd-MM-yyyy");
+        Date nacimiento = formatoFecha.parse(fechaNacimiento);
+
+        Date fechaActualSinFormato = new Date();
+        Date fechaActual = formatoFecha.parse(formatoFecha.format(fechaActualSinFormato));
+
+        long edad = ((fechaActual.getTime() - nacimiento.getTime()) / (1000L * 60 * 60 * 24 * 365));
+
+        return Math.abs((int) edad);
+    }
 
 }

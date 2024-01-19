@@ -6,6 +6,10 @@ public abstract class RegularesAbstract {
 
     private float altura;
 
+    public RegularesAbstract(){
+
+    }
+
     public RegularesAbstract(float base, float altura) {
         this.base = base;
         this.altura = altura;

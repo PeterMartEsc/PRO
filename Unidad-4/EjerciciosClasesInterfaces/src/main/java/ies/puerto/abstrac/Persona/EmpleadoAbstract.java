@@ -2,9 +2,24 @@ package ies.puerto.abstrac.Persona;
 
 import ies.puerto.interfaz.Persona.ITrabajador;
 
-public class EmpleadoAbstract extends PersonaAbstract implements ITrabajador  {
-    public EmpleadoAbstract(String nombre, String fechaNacimiento) {
+public abstract class EmpleadoAbstract extends PersonaAbstract implements ITrabajador  {
+
+    private float salario;
+
+    public EmpleadoAbstract() {
+    }
+
+    public EmpleadoAbstract(String nombre, String fechaNacimiento, float salario) {
         super(nombre, fechaNacimiento);
+        this.salario = salario;
+    }
+
+    public float getSalario() {
+        return salario;
+    }
+
+    public void setSalario(float salario) {
+        this.salario = salario;
     }
 
     @Override
@@ -13,7 +28,11 @@ public class EmpleadoAbstract extends PersonaAbstract implements ITrabajador  {
     }
 
     @Override
-    public String anio(String anio) {
-        return anio;
+    public abstract String toString();
+
+    public float salario (float salario){
+
+        return salario;
     }
+
 }
