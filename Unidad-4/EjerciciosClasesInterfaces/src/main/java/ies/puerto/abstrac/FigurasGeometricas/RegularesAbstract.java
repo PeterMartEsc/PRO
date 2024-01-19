@@ -1,6 +1,6 @@
 package ies.puerto.abstrac.FigurasGeometricas;
 
-public class RegularesAbstract {
+public abstract class RegularesAbstract {
 
     private float base;
 
