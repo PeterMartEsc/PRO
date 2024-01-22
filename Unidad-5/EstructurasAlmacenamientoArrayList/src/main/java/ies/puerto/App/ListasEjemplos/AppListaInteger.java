@@ -1,10 +1,10 @@
-package ies.puerto.App;
+package ies.puerto.App.ListasEjemplos;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class AppLista {
+public class AppListaInteger {
     static List<Integer> miListaEnteros;
 
     public static void main(String[] args) {
