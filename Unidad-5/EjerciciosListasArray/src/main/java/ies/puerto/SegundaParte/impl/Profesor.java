@@ -18,4 +18,6 @@ public class Profesor extends EmpleadoAbstract {
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
     }
+
+
 }

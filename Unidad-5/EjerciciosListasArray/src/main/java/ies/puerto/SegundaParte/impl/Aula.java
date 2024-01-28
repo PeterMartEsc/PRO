@@ -41,4 +41,15 @@ public class Aula {
     public void setAlumnos(List<Alumno> alumnos) {
         this.alumnos = alumnos;
     }
+
+    public float notaMediaAula(List<Nota> notas){
+
+        float suma=0;
+
+        for(Nota elemento : notas){
+            suma += elemento.getValor();
+        }
+
+        return suma/ notas.size();
+    }
 }

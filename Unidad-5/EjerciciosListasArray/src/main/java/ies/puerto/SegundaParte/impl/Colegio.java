@@ -52,4 +52,25 @@ public class Colegio {
     public void setAulas(List<Aula> aulas) {
         this.aulas = aulas;
     }
+
+    public float notaMaxima(List<Nota> notas){
+
+        float notaMax = 0;
+
+        for (Nota elemento : notas){
+            if(elemento.getValor() > notaMax){
+                notaMax = elemento.getValor();
+            }
+        }
+
+        return notaMax;
+    }
+
+    //Falta media del colegio, no se hacerla
+
+    //Falta media salario y lo mismo con el máximo y minimo. Como cojo el salario de varios profesores?
+    // Creo una lsta de profesores?
+
+    //El resto de métodos lo mismo, me bloqueé. Hace falta crear más listas al margen de las especificadas?
+
 }
