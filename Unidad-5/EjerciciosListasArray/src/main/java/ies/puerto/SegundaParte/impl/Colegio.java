@@ -1,5 +1,6 @@
 package ies.puerto.SegundaParte.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,11 +16,8 @@ public class Colegio {
 
     public Colegio(){}
 
-    public Colegio(String nombre, String direccion, String ubicacion, List<Aula> aulas) {
-        this.nombre = nombre;
-        this.direccion = direccion;
-        this.ubicacion = ubicacion;
-        this.aulas = aulas;
+    public Colegio(List<Aula> aulas) {
+        this.aulas = new ArrayList<>();;
     }
 
     public String getNombre() {
@@ -54,23 +52,21 @@ public class Colegio {
         this.aulas = aulas;
     }
 
-    public float notaMaxima(List<Nota> notas){
+    public float mediaColegio(){
+        float resultado=0f;
 
-        float notaMax = 0;
-
-        for (Nota elemento : notas){
-            if(elemento.getValor() > notaMax){
-                notaMax = elemento.getValor();
-            }
+        if(aulas.isEmpty()){
+            return resultado;
         }
 
-        return notaMax;
+        for(Aula aula : aulas){
+            resultado+= aula.notaMediaAula();
+        }
+
+        return resultado/aulas.size();
     }
 
-    //Falta media del colegio, no se hacerla
-
-    //Falta media salario y lo mismo con el máximo y minimo. Como cojo el salario de varios profesores?
-    // Creo una lsta de profesores?
+    //Falta media salario. Como cojo el salario de varios profesores?
 
     //El resto de métodos lo mismo, me bloqueé. Hace falta crear más listas al margen de las especificadas?
 

@@ -1,5 +1,7 @@
 package ies.puerto.SegundaParte.impl;
 
+import java.util.Objects;
+
 public class Nota {
 
     private String nombre;
@@ -27,5 +29,18 @@ public class Nota {
 
     public void setValor(int valor) {
         this.valor = valor;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Nota nota = (Nota) o;
+        return Objects.equals(nombre, nota.nombre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre);
     }
 }

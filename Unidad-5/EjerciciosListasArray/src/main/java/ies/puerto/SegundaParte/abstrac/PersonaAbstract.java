@@ -3,6 +3,7 @@ package ies.puerto.SegundaParte.abstrac;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 
 public abstract class PersonaAbstract {
 
@@ -14,9 +15,12 @@ public abstract class PersonaAbstract {
 
     public PersonaAbstract(){}
 
-    public PersonaAbstract(String nombre, int dni, String fechaNacimiento) {
-        this.nombre = nombre;
+    public PersonaAbstract(int dni) {
         this.dni = dni;
+    }
+
+    public PersonaAbstract(String nombre, String fechaNacimiento) {
+        this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
     }
 
@@ -55,5 +59,27 @@ public abstract class PersonaAbstract {
         long edad = ((fechaActual.getTime() - nacimiento.getTime()) / (1000L * 60 * 60 * 24 * 365));
 
         return Math.abs((int) edad);
+    }
+
+    @Override
+    public String toString() {
+        return "PersonaAbstract{" +
+                "nombre='" + nombre + '\'' +
+                ", dni=" + dni +
+                ", fechaNacimiento='" + fechaNacimiento + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PersonaAbstract that = (PersonaAbstract) o;
+        return dni == that.dni;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(dni);
     }
 }

@@ -1,5 +1,6 @@
 package ies.puerto.SegundaParte.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -11,12 +12,8 @@ public class Aula {
 
     private List<Alumno> alumnos;
 
-    public Aula(){}
-
-    public Aula(String nombre, Profesor profesor, List<Alumno> alumnos) {
-        this.nombre = nombre;
-        this.profesor = profesor;
-        this.alumnos = alumnos;
+    public Aula(){
+        alumnos = new ArrayList<>();
     }
 
     public String getNombre() {
@@ -43,15 +40,19 @@ public class Aula {
         this.alumnos = alumnos;
     }
 
-    public float notaMediaAula(List<Nota> notas){
+    public float notaMediaAula(){
 
-        float suma=0;
+        float resultado=0f;
 
-        for(Nota elemento : notas){
-            suma += elemento.getValor();
+        if(alumnos.isEmpty()){
+            return resultado;
         }
 
-        return suma/ notas.size();
+        for(Alumno alumno : alumnos){
+            resultado += alumno.media();
+        }
+
+        return resultado/alumnos.size();
     }
 
     @Override

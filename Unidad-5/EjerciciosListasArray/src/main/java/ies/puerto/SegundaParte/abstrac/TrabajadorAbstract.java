@@ -6,8 +6,13 @@ public abstract class TrabajadorAbstract extends PersonaAbstract{
 
     public TrabajadorAbstract(){}
 
+    public TrabajadorAbstract(int dni, float salario) {
+        super(dni);
+        this.salario = salario;
+    }
+
     public TrabajadorAbstract(String nombre, int dni, String fechaNacimiento, float salario) {
-        super(nombre, dni, fechaNacimiento);
+        super(nombre, fechaNacimiento);
         this.salario = salario;
     }
 
