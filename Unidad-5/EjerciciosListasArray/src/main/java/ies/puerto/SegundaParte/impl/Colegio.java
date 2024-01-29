@@ -1,6 +1,7 @@
 package ies.puerto.SegundaParte.impl;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Colegio {
 
@@ -73,4 +74,17 @@ public class Colegio {
 
     //El resto de métodos lo mismo, me bloqueé. Hace falta crear más listas al margen de las especificadas?
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Colegio colegio = (Colegio) o;
+        return Objects.equals(aulas, colegio.aulas);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(aulas);
+    }
 }

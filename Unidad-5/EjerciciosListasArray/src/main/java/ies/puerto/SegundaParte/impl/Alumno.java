@@ -3,6 +3,7 @@ package ies.puerto.SegundaParte.impl;
 import ies.puerto.SegundaParte.abstrac.PersonaAbstract;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Alumno extends PersonaAbstract {
 
@@ -21,5 +22,18 @@ public class Alumno extends PersonaAbstract {
 
     public void setNotas(List<Nota> notas) {
         this.notas = notas;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Alumno alumno = (Alumno) o;
+        return Objects.equals(notas, alumno.notas);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(notas);
     }
 }

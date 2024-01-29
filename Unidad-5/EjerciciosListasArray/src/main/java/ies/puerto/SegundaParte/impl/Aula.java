@@ -1,6 +1,7 @@
 package ies.puerto.SegundaParte.impl;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Aula {
 
@@ -51,5 +52,18 @@ public class Aula {
         }
 
         return suma/ notas.size();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Aula aula = (Aula) o;
+        return Objects.equals(alumnos, aula.alumnos);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(alumnos);
     }
 }
