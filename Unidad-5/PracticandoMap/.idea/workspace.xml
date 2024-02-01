@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6cbea5ad-45c1-4b99-8a8c-e4b81d5ead3c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/ies/puerto/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/ies/puerto/map/AppPersona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/ies/puerto/map/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosHashSet/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EjerciciosHashSet/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosHashSet/src/main/java/ies/puerto/PrimeraParte/App/AppConcesionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EjerciciosHashSet/src/main/java/ies/puerto/PrimeraParte/App/AppConcesionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosHashSet/src/main/java/ies/puerto/PrimeraParte/vehiculos/Coche.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EjerciciosHashSet/src/main/java/ies/puerto/PrimeraParte/vehiculos/Coche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosHashSet/src/main/java/ies/puerto/PrimeraParte/vehiculos/Concesionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EjerciciosHashSet/src/main/java/ies/puerto/PrimeraParte/vehiculos/Concesionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosHashSet/src/main/java/ies/puerto/PrimeraParte/vehiculos/Motocicleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EjerciciosHashSet/src/main/java/ies/puerto/PrimeraParte/vehiculos/Motocicleta.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2blspgXWjHDSxIXst5ZwKrIzXPf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6cbea5ad-45c1-4b99-8a8c-e4b81d5ead3c" name="Changes" comment="" />
+      <created>1706801183749</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706801183749</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -12,6 +12,12 @@ public abstract class VehiculoAbstracta {
 
     private int velocidad;
 
+    public VehiculoAbstracta(){}
+
+    public VehiculoAbstracta(String matricula){
+        this.matricula = matricula;
+    }
+
     public VehiculoAbstracta(String marca, String modelo, String matricula, int velocidad) {
         this.marca = marca;
         this.modelo = modelo;
