@@ -18,18 +18,20 @@ public class Motocicleta extends VehiculoAbstracta implements IVehiculo {
         super(marca, modelo, matricula, velocidad);
     }
 
-    @Override
-    public String toString() {
-        return "Motocicletas{" +
-                "marca='" + getMarca() + '\'' +
-                ", modelo='" + getModelo() + '\'' +
-                ", matricula='" + getMatricula() + '\'' +
-                ", velocidad=" + getVelocidad() +
-                '}';
-    }
+
 
     @Override
     public int velocidadMaxima() {
         return 120;
+    }
+
+    @Override
+    public String toString() {
+        return "Motocicletas{" +
+                "marca='" + getMarca() + ",\n" +
+                " modelo='" + getModelo() + ",\n" +
+                " matricula='" + getMatricula() + ",\n" +
+                " velocidad=" + getVelocidad() +
+                '}';
     }
 }

@@ -26,10 +26,10 @@ public class Coche extends VehiculoAbstracta implements IVehiculo {
     @Override
     public String toString() {
         return "Coches{" +
-                "marca='" + getMarca() + '\'' +
-                ", modelo='" + getModelo() + '\'' +
-                ", matricula='" + getMatricula() + '\'' +
-                ", velocidad=" + getVelocidad() +
+                "marca='" + getMarca() + ",\n" +
+                " modelo='" + getModelo() + ",\n" +
+                " matricula='" + getMatricula() + ",\n" +
+                " velocidad=" + getVelocidad() +
                 '}';
     }
 }
