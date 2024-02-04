@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="120e80b4-80fb-4a44-bc91-c7f50230f46f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../PracticandoMap/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticandoMap/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticandoMap/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticandoMap/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticandoMap/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticandoMap/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticandoMap/src/main/java/es/ies/puerto/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticandoMap/src/main/java/es/ies/puerto/map/AppPersona.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticandoMap/src/main/java/es/ies/puerto/map/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ies/puerto/Dudas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ies/puerto/PrimeraParte/Abstractas/VehiculoAbstracta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ies/puerto/PrimeraParte/Abstractas/VehiculoAbstracta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ies/puerto/PrimeraParte/App/AppConcesionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ies/puerto/PrimeraParte/App/AppConcesionario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ies/puerto/PrimeraParte/vehiculos/Coche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ies/puerto/PrimeraParte/vehiculos/Coche.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ies/puerto/PrimeraParte/vehiculos/Concesionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ies/puerto/PrimeraParte/vehiculos/Concesionario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ies/puerto/PrimeraParte/vehiculos/Motocicleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ies/puerto/PrimeraParte/vehiculos/Motocicleta.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,10 +32,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/dam/PeterMartEsc/PRO/Unidad-4/EjerciciosClasesInterfaces"
+    "last_opened_file_path": "C:/GitHub/DAM/PRO/Unidad-5/EjerciciosHashSet",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
