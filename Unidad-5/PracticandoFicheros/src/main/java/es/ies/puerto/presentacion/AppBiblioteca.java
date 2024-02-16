@@ -9,8 +9,6 @@ public class AppBiblioteca {
     public static void main(String[] args) {
         List<Articulo> alimentos = lectura("src/main/resources/alimentos.csv");
         System.out.println(alimentos);
-        //lectura("src/main/resources/aparatos.csv");
-        //lectura("src/main/resources/souvenirs.csv");
     }
 
     public static List<Articulo> lectura(String path) {
@@ -30,14 +28,15 @@ public class AppBiblioteca {
                 // Leer cada línea del fichero
                 while ((linea = br.readLine()) != null) {
 
-                    if(i>0) {
+                    if (i > 0) {
 
                         String[] alimentoArray = linea.split(",");
                         Alimento alimento = new Alimento(alimentoArray[3], alimentoArray[0],
                                 Float.parseFloat(alimentoArray[1]), alimentoArray[2], alimentoArray[4]);
                         articulos.add(alimento);
                     }
-                    i ++;
+
+                    i++;
                 }
 
             } catch (IOException e) {
