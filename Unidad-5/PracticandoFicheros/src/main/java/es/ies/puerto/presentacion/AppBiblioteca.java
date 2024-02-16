@@ -13,7 +13,7 @@ public class AppBiblioteca {
         //lectura("src/main/resources/souvenirs.csv");
     }
 
-    public static List<Articulo> lectura(String path, String articulo) {
+    public static List<Articulo> lectura(String path) {
 
         File fichero = new File(path);
 
@@ -31,18 +31,6 @@ public class AppBiblioteca {
                 while ((linea = br.readLine()) != null) {
 
                     if(i>0) {
-
-                        switch(articulo){
-                            case "alimento":
-
-                                break;
-
-                            case "aparato":
-
-                                break;
-
-                            default: //mostrar error
-                        }
 
                         String[] alimentoArray = linea.split(",");
                         Alimento alimento = new Alimento(alimentoArray[3], alimentoArray[0],
