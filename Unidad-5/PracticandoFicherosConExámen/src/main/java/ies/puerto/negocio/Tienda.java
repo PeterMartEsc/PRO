@@ -1,7 +1,10 @@
-package ies.puerto.Impl;
+package ies.puerto.negocio;
 
 
-import ies.puerto.Abstractas.Producto;
+import ies.puerto.modelo.impl.Alimento;
+import ies.puerto.modelo.impl.Aparato;
+import ies.puerto.modelo.impl.CuidadoPersonal;
+import ies.puerto.modelo.impl.Souvenir;
 
 import java.text.ParseException;
 import java.util.ArrayList;

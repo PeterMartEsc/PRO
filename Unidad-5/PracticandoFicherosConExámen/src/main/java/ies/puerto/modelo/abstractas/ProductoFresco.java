@@ -1,6 +1,6 @@
-package ies.puerto.Abstractas;
+package ies.puerto.modelo.abstractas;
 
-import ies.puerto.Interfaces.ISaludable;
+import ies.puerto.modelo.interfaces.ISaludable;
 
 public abstract class ProductoFresco extends Producto implements ISaludable {
 

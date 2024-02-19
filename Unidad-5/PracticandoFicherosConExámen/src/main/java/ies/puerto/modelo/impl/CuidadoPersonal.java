@@ -1,6 +1,6 @@
-package ies.puerto.Impl;
+package ies.puerto.modelo.impl;
 
-import ies.puerto.Abstractas.ProductoRecomendable;
+import ies.puerto.modelo.abstractas.ProductoRecomendable;
 
 public class CuidadoPersonal extends ProductoRecomendable {
 

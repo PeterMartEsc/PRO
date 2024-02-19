@@ -1,6 +1,6 @@
-package ies.puerto.Impl;
+package ies.puerto.modelo.impl;
 
-import ies.puerto.Abstractas.Producto;
+import ies.puerto.modelo.abstractas.Producto;
 
 public class Souvenir extends Producto {
 

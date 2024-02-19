@@ -1,6 +1,11 @@
-package ies.puerto.App;
+package ies.puerto.presentacion.app;
 
-import ies.puerto.Impl.*;
+import ies.puerto.impl.*;
+import ies.puerto.modelo.impl.Alimento;
+import ies.puerto.modelo.impl.Aparato;
+import ies.puerto.modelo.impl.CuidadoPersonal;
+import ies.puerto.modelo.impl.Souvenir;
+import ies.puerto.negocio.Tienda;
 
 import java.text.ParseException;
 import java.util.Scanner;

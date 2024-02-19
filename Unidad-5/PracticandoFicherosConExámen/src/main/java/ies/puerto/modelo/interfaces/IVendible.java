@@ -1,4 +1,4 @@
-package ies.puerto.Interfaces;
+package ies.puerto.modelo.interfaces;
 
 public interface IVendible {
 
