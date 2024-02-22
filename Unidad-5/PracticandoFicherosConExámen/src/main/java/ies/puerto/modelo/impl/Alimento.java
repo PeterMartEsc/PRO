@@ -26,14 +26,15 @@ public class Alimento extends ProductoFresco {
 
     @Override
     public int diasPreCaducidad() throws ParseException {
-        SimpleDateFormat formatoFecha = new SimpleDateFormat("dd-MM-aaaa");
+
+        SimpleDateFormat formatoFecha = new SimpleDateFormat("aaaa-MM-dd");
         Date entrada = formatoFecha.parse(getFechaEntrada());
 
         Date caducidad = formatoFecha.parse(getFechaCaducidad());
 
-        long diferencia = ((caducidad.getTime()-entrada.getTime()) / (1000L * 60 * 60 * 24));
+        long diferencia = (((caducidad.getTime()-entrada.getTime()) / 1000) * (3600 * 24));
 
-        return (int) Math.abs(diferencia);
+        return (int) diferencia;
     }
 
     @Override

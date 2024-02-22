@@ -200,6 +200,7 @@ public class Tienda {
     }
 
     public float precioTotalAlimentos() throws ParseException {
+
         float resultado = 0f;
 
         if(alimentos.isEmpty()){
@@ -207,8 +208,7 @@ public class Tienda {
         }
 
         for(Alimento alimento : alimentos){
-            if(alimento.verificarCaducidad()){
-                alimentos.remove(alimento);
+            if(!alimento.verificarCaducidad()){
                 resultado += alimento.getPrecio();
             }
 
@@ -268,16 +268,14 @@ public class Tienda {
 
     public int cantidadAlimentos() throws ParseException {
 
-        if(alimentos.isEmpty()){
-            return 0;
-        }
-
         int contador =0;
 
+        if(alimentos.isEmpty()){
+            return contador;
+        }
+
         for(Alimento alimento1 : alimentos){
-            if(alimento1.verificarCaducidad()){
-                alimentos.remove(alimento1);
-            }
+
             if(!alimento1.verificarCaducidad()){
                 contador ++;
             }
@@ -288,11 +286,11 @@ public class Tienda {
 
     public int cantidadAparatos() {
 
-        if(aparatos.isEmpty()){
-            return 0;
-        }
-
         int contador =0;
+
+        if(aparatos.isEmpty()){
+            return contador;
+        }
 
         for(Aparato aparato : aparatos){
             contador++;
@@ -303,11 +301,11 @@ public class Tienda {
 
     public int cantidadSouvenirs() {
 
-        if(souvenirs.isEmpty()){
-            return 0;
-        }
-
         int contador =0;
+
+        if(souvenirs.isEmpty()){
+            return contador;
+        }
 
         for(Souvenir souvenir : souvenirs.values()){
             contador++;
@@ -318,11 +316,11 @@ public class Tienda {
 
     public int cantidadCuidadoPersonal() {
 
+        int contador =0;
+
         if(cuidadosPersonales.isEmpty()){
             return 0;
         }
-
-        int contador =0;
 
         for(CuidadoPersonal cuidadoPersonal : cuidadosPersonales){
             contador++;
