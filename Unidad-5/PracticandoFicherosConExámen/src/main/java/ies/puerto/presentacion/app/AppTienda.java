@@ -80,7 +80,7 @@ public class AppTienda {
         alimentos.add(alimento1);
         alimentos.add(alimento2);
         alimentos.add(alimento3);
-
+        tienda.setAlimentos(alimentos);
     }
 
     public static void aniadirAparatos(){
@@ -88,6 +88,7 @@ public class AppTienda {
         aparatos.add(aparato1);
         aparatos.add(aparato2);
         aparatos.add(aparato3);
+        tienda.setAparatos(aparatos);
     }
 
     public static void aniadirSouvenirs(){
@@ -95,7 +96,7 @@ public class AppTienda {
         souvenirs.put(souvenir1.getId(), souvenir1);
         souvenirs.put(souvenir2.getId(), souvenir2);
         souvenirs.put(souvenir3.getId(), souvenir3);
-
+        tienda.setSouvenirs(souvenirs);
     }
 
     public static void aniadirCuidadosPersonal(){
@@ -103,7 +104,7 @@ public class AppTienda {
         cuidadosPersonales.add(cPersonal1);
         cuidadosPersonales.add(cPersonal2);
         cuidadosPersonales.add(cPersonal3);
-
+        tienda.setCuidadosPersonales(cuidadosPersonales);
     }
 
     public static void menu() throws ParseException {
@@ -373,12 +374,12 @@ public class AppTienda {
                 System.out.println("El precio total de los alimentos es: " +tienda.precioTotalAlimentos());
                 break;
 
-            case "aparatos":
+            case "aparato":
                 System.out.println("En la tienda hay: " +tienda.cantidadAparatos());
                 System.out.println(tienda.getAparatos());
                 System.out.println("El precio total de los aparatos es: " +tienda.precioTotalAparatos());
 
-            case "souvenirs":
+            case "souvenir":
                 System.out.println("En la tienda hay: " +tienda.cantidadSouvenirs());
                 System.out.println(tienda.getSouvenirs());
                 System.out.println("El precio total de los souvenirs es: " +tienda.precioTotalSouvenirs());
