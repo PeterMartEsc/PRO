@@ -6,6 +6,7 @@ import es.ies.puerto.Productos.Electronica;
 import es.ies.puerto.Productos.Souvenir;
 import es.ies.puerto.Productos.Supermercado;
 
+import javax.crypto.spec.PSource;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -221,33 +222,187 @@ public class AppTienda {
 
     }
 
-    public static ProductoAbstracta especificacionesProducto(String producto){
+        public static ProductoAbstracta especificacionesProducto(String producto){
 
-        Scanner scanner = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Nombre del " + producto + ":");
-        String nombre = scanner.nextLine();
+            System.out.println("Nombre del " + producto + ":");
+            String nombre = scanner.nextLine();
 
-        System.out.println("Modelo de " + producto + ":");
-        float precio = scanner.nextFloat();
+            System.out.println("Modelo de " + producto + ":");
+            float precio = scanner.nextFloat();
 
-        System.out.println("Matricula de " + producto + ":");
-        String fechaEntrada = scanner.nextLine();
+            System.out.println("Matricula de " + producto + ":");
+            String fechaEntrada = scanner.nextLine();
 
-        System.out.println("Velocidad del vehiculo: " );
-        String udi = scanner.nextLine();
+            System.out.println("Velocidad del vehiculo: " );
+            String udi = scanner.nextLine();
 
-        switch (producto){
+            switch (producto){
+
+                case "alimento":
+
+                    Alimento alimento = new Alimento(nombre, precio, fechaEntrada, udi);
+
+                    // if()
+
+                    return alimento;
+
+                case "electronica":
+
+                    Electronica electronica = new Electronica(nombre, precio, fechaEntrada, udi);
+
+                    return electronica;
+
+                case "souvenir":
+
+                    Souvenir souvenir = new Souvenir(nombre, precio, fechaEntrada, udi);
+
+                    return souvenir;
+
+                default:
+
+                    System.out.println("Cancelando, introduzca un valor apto");
+
+                    break;
+            }
+
+            return null;
+
+        }
+
+    public static void mostrarProducto(String tipoMostra){
+
+        switch (tipoMostra){
 
             case "alimento":
-                Alimento alimento = new Alimento(nombre, precio, fechaEntrada, udi);
 
-                if()
+                System.out.println(alimentos);
+                break;
+
+            case "electronica":
+
+                System.out.println(electronicas);
+                break;
+
+            case "souvenir":
+
+                System.out.println(souvenirs);
+                break;
+
+            default:
+
+                System.out.println("Cancelando. Introduzca un valor válido");
         }
 
     }
 
-    public static void mostrarProducto(String tipoMostra){
+    public static void eliminarProducto(String producto){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Introduzca el udi del producto a eliminar: " +supermercado);
+        String udi = scanner.nextLine();
+
+        udi = udi.toLowerCase();
+
+        switch(producto){
+
+            case "alimento":
+
+                Alimento alimento = new Alimento(udi);
+
+                if(!supermercado.getAlimentos().contains(alimento)){
+                    System.out.println("El udi no pertenece a ningún alimento del supermercado");
+                    break;
+                }
+
+                supermercado.removeAlimento(alimento);
+                break;
+
+            case "electronica":
+
+                Electronica electronica = new Electronica(udi);
+
+                if(!supermercado.getElectronicas().contains(electronica)){
+                    System.out.println("El udi no pertenece a ningún producto electronico del supermercado");
+                    break;
+                }
+
+                supermercado.removeElectronica(electronica);
+                break;
+
+            case "souvenir":
+
+                Souvenir souvenir = new Souvenir(udi);
+
+                if(!supermercado.getSouvenirs().containsValue(souvenir)){
+                    System.out.println("El udi no pertenece a ningún souvenir del supermercado");
+                    break;
+                }
+
+                supermercado.removeSouvenir(souvenir);
+                break;
+
+            default:
+
+                System.out.println("Cancelando. Seleccione una opcion valida");
+                break;
+        }
+
+    }
+
+    public static void modificarProducto(String producto){
+
+        Scanner scanner = new Scanner(System.in);
+
+        switch(producto){
+
+            case "alimento":
+
+                System.out.println("Introduzca el udi del alimento a modificar: " +supermercado.getAlimentos());
+                String udiEliminar = scanner.nextLine();
+
+                udiEliminar = udiEliminar.toLowerCase();
+
+                Alimento alimentoEliminar = new Alimento(udiEliminar);
+                Alimento alimento = (Alimento) especificacionesProducto(producto);
+
+                supermercado.removeAlimento(alimentoEliminar);
+                supermercado.addAlimento(alimento);
+
+                break;
+
+            case "electronica":
+
+                System.out.println("Introduzca el udi del producto electronico a modificar: " +supermercado.getElectronicas());
+                String udiEliminar2 = scanner.nextLine();
+
+                udiEliminar2 = udiEliminar2.toLowerCase();
+
+                Electronica electronicaEliminar = new Electronica(udiEliminar2);
+                Electronica electronica = (Electronica) especificacionesProducto(producto);
+
+                supermercado.removeElectronica(electronicaEliminar);
+                supermercado.addElectronica(electronica);
+
+                break;
+
+            case "souvenir":
+
+                System.out.println("Introduzca el udi del souvenir a modificar: " +supermercado.getSouvenirs());
+                String udiEliminar3 = scanner.nextLine();
+
+                udiEliminar3 = udiEliminar3.toLowerCase();
+
+                Souvenir souvenirEliminar = new Souvenir(udiEliminar3);
+                Souvenir souvenir = (Souvenir) especificacionesProducto(producto);
+
+                supermercado.removeSouvenir(souvenirEliminar);
+                supermercado.addSouvenir(souvenir);
+
+                break;
+        }
 
     }
 }

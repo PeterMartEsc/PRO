@@ -19,16 +19,14 @@ public class Alimento extends ProductoAbstracta {
         super(nombre, precio, fechaEntrada, udi);
     }
 
-    public int diasDisponible(){
+    //public int diasDisponible(){
 
-        SimpleDateFormat formatoEuropeo = new SimpleDateFormat("dd-MM-aaaa");
+        //SimpleDateFormat formatoFecha = new SimpleDateFormat("dd-MM-aaaa");
 
-        Date fechaActual = new Date();
+        //Date dateEntrada = formatoFecha.parse();
 
-        Date fechaEntrada;
-
-        return 0;
-    }
+        //return 0;
+    //}
 
     public boolean caducado(){
 

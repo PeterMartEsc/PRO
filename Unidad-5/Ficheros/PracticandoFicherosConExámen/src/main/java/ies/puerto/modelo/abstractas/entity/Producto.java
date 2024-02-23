@@ -1,4 +1,4 @@
-package ies.puerto.modelo.abstractas;
+package ies.puerto.modelo.abstractas.entity;
 
 import ies.puerto.modelo.interfaces.IVendible;
 

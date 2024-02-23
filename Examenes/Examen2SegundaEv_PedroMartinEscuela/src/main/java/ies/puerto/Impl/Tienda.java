@@ -1,10 +1,7 @@
-package ies.puerto.negocio;
+package ies.puerto.Impl;
 
 
-import ies.puerto.modelo.impl.Alimento;
-import ies.puerto.modelo.impl.Aparato;
-import ies.puerto.modelo.impl.CuidadoPersonal;
-import ies.puerto.modelo.impl.Souvenir;
+import ies.puerto.Abstractas.Producto;
 
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -200,7 +197,6 @@ public class Tienda {
     }
 
     public float precioTotalAlimentos() throws ParseException {
-
         float resultado = 0f;
 
         if(alimentos.isEmpty()){
@@ -208,7 +204,8 @@ public class Tienda {
         }
 
         for(Alimento alimento : alimentos){
-            if(!alimento.verificarCaducidad()){
+            if(alimento.verificarCaducidad()){
+                alimentos.remove(alimento);
                 resultado += alimento.getPrecio();
             }
 
@@ -268,14 +265,16 @@ public class Tienda {
 
     public int cantidadAlimentos() throws ParseException {
 
-        int contador =0;
-
         if(alimentos.isEmpty()){
-            return contador;
+            return 0;
         }
 
-        for(Alimento alimento1 : alimentos){
+        int contador =0;
 
+        for(Alimento alimento1 : alimentos){
+            if(alimento1.verificarCaducidad()){
+                alimentos.remove(alimento1);
+            }
             if(!alimento1.verificarCaducidad()){
                 contador ++;
             }
@@ -286,11 +285,11 @@ public class Tienda {
 
     public int cantidadAparatos() {
 
-        int contador =0;
-
         if(aparatos.isEmpty()){
-            return contador;
+            return 0;
         }
+
+        int contador =0;
 
         for(Aparato aparato : aparatos){
             contador++;
@@ -301,11 +300,11 @@ public class Tienda {
 
     public int cantidadSouvenirs() {
 
-        int contador =0;
-
         if(souvenirs.isEmpty()){
-            return contador;
+            return 0;
         }
+
+        int contador =0;
 
         for(Souvenir souvenir : souvenirs.values()){
             contador++;
@@ -316,11 +315,11 @@ public class Tienda {
 
     public int cantidadCuidadoPersonal() {
 
-        int contador =0;
-
         if(cuidadosPersonales.isEmpty()){
             return 0;
         }
+
+        int contador =0;
 
         for(CuidadoPersonal cuidadoPersonal : cuidadosPersonales){
             contador++;
@@ -328,8 +327,6 @@ public class Tienda {
 
         return contador;
     }
-
-
 
     @Override
     public String toString() {

@@ -1,12 +1,10 @@
-package ies.puerto.modelo.impl;
+package ies.puerto.Impl;
 
-import ies.puerto.modelo.abstractas.entity.ProductoFresco;
+import ies.puerto.Abstractas.ProductoFresco;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 public class Alimento extends ProductoFresco {
 
@@ -28,15 +26,14 @@ public class Alimento extends ProductoFresco {
 
     @Override
     public int diasPreCaducidad() throws ParseException {
-
-        DateFormat formatoFecha = new SimpleDateFormat("aaaa-MM-dd");
+        SimpleDateFormat formatoFecha = new SimpleDateFormat("dd-MM-aaaa");
         Date entrada = formatoFecha.parse(getFechaEntrada());
 
         Date caducidad = formatoFecha.parse(getFechaCaducidad());
 
-        long diferencia = (((caducidad.getTime()-entrada.getTime()) / 1000) * (3600 * 24));
+        long diferencia = ((caducidad.getTime()-entrada.getTime()) / (1000L * 60 * 60 * 24));
 
-        return (int) diferencia;
+        return (int) Math.abs(diferencia);
     }
 
     @Override
@@ -63,9 +60,9 @@ public class Alimento extends ProductoFresco {
     public String toString() {
         return "Alimento{" +
                 "Nombre: " +getNombre()+
-                " Precio: " +getPrecio()+
-                " Fecha de caducidad: " +getFechaCaducidad()+
-                " Identificador: " +getId()+
+                "Precio: " +getPrecio()+
+                "Fecha de caducidad: " +getFechaCaducidad()+
+                "Identificador: " +getId()+
                 "}";
     }
 }

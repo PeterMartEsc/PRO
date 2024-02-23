@@ -1,6 +1,6 @@
-package ies.puerto.modelo.impl;
+package ies.puerto.Impl;
 
-import ies.puerto.modelo.abstractas.entity.Producto;
+import ies.puerto.Abstractas.Producto;
 
 public class Souvenir extends Producto {
 
@@ -27,10 +27,6 @@ public class Souvenir extends Producto {
 
     @Override
     public String toString() {
-        return "Souvenir{" +
-                "Nombre: " +getNombre()+
-                " Precio: " +getPrecio()+
-                " Identificador: " +getId()+
-                "}";
+        return "Souvenir{}";
     }
 }

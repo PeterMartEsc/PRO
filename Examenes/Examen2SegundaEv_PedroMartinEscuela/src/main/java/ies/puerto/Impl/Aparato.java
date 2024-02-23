@@ -1,6 +1,6 @@
-package ies.puerto.modelo.impl;
+package ies.puerto.Impl;
 
-import ies.puerto.modelo.abstractas.entity.Producto;
+import ies.puerto.Abstractas.Producto;
 
 public class Aparato extends Producto {
 
@@ -27,11 +27,6 @@ public class Aparato extends Producto {
 
     @Override
     public String toString() {
-        return "Aparato{" +
-                "Nombre: " +getNombre() +
-                " Precio: " +getPrecio() +
-                " Fecha de entrada: " +getFechaEntrada() +
-                " id: " +getId()+
-                "}";
+        return "Aparato{}";
     }
 }
