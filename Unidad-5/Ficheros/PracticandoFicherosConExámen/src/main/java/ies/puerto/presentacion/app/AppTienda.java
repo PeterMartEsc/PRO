@@ -410,7 +410,5 @@ public class AppTienda {
                 System.out.println("Cancelando. Introduzca una opción válida");
                 break;
         }
-
     }
-
 }

@@ -1,4 +1,4 @@
-package ies.puerto.modelo.abstractas.fichero.interfaces;
+package ies.puerto.modelo.interfaces.file;
 
 import ies.puerto.modelo.abstractas.entity.Producto;
 
