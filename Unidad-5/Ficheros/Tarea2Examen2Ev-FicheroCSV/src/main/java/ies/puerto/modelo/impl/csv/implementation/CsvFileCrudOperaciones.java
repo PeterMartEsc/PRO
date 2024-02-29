@@ -82,8 +82,8 @@ public class CsvFileCrudOperaciones extends FicheroAbstracta implements IFileInt
     }
 
     private Alimento splitToAlimento(String[] splitArray){
-        Alimento alimento = new Alimento( splitArray[3], splitArray[0], Float.parseFloat(splitArray[1]),
-                splitArray[4], splitArray[2] );
+        Alimento alimento = new Alimento( splitArray[0], splitArray[1], Float.parseFloat(splitArray[2]),
+                splitArray[3], splitArray[4] );
 
         return alimento;
     }
