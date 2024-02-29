@@ -1,0 +1,15 @@
+/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/PracticandoFicherosConExámen/src/main/java/ies/puerto/modelo/impl/Souvenir.java
+/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/PracticandoFicherosConExámen/src/main/java/ies/puerto/modelo/abstractas/fichero/csv/implementation/FileCsv.java
+/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/PracticandoFicherosConExámen/src/main/java/ies/puerto/negocio/Tienda.java
+/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/PracticandoFicherosConExámen/src/main/java/ies/puerto/modelo/interfaces/ISaludable.java
+/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/PracticandoFicherosConExámen/src/main/java/ies/puerto/presentacion/app/AppTienda.java
+/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/PracticandoFicherosConExámen/src/main/java/ies/puerto/modelo/abstractas/entity/ProductoFresco.java
+/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/PracticandoFicherosConExámen/src/main/java/ies/puerto/modelo/abstractas/entity/Producto.java
+/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/PracticandoFicherosConExámen/src/main/java/ies/puerto/modelo/abstractas/fichero/FicheroAbstracta.java
+/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/PracticandoFicherosConExámen/src/main/java/ies/puerto/modelo/impl/Alimento.java
+/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/PracticandoFicherosConExámen/src/main/java/ies/puerto/modelo/impl/CuidadoPersonal.java
+/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/PracticandoFicherosConExámen/src/main/java/ies/puerto/modelo/abstractas/entity/ProductoRecomendable.java
+/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/PracticandoFicherosConExámen/src/main/java/ies/puerto/modelo/impl/Aparato.java
+/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/PracticandoFicherosConExámen/src/main/java/ies/puerto/modelo/interfaces/IVendible.java
+/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/PracticandoFicherosConExámen/src/main/java/ies/puerto/modelo/abstractas/fichero/interfaces/IFileInterface.java
+/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/PracticandoFicherosConExámen/src/main/java/ies/puerto/modelo/interfaces/IRecomendable.java

@@ -1,0 +1,15 @@
+ies/puerto/modelo/abstractas/entity/Producto.class
+ies/puerto/modelo/abstractas/fichero/csv/implementation/FileCsv.class
+ies/puerto/modelo/impl/Alimento.class
+ies/puerto/modelo/interfaces/IRecomendable.class
+ies/puerto/modelo/abstractas/fichero/interfaces/IFileInterface.class
+ies/puerto/negocio/Tienda.class
+ies/puerto/presentacion/app/AppTienda.class
+ies/puerto/modelo/interfaces/IVendible.class
+ies/puerto/modelo/abstractas/fichero/FicheroAbstracta.class
+ies/puerto/modelo/impl/CuidadoPersonal.class
+ies/puerto/modelo/interfaces/ISaludable.class
+ies/puerto/modelo/impl/Aparato.class
+ies/puerto/modelo/abstractas/entity/ProductoRecomendable.class
+ies/puerto/modelo/abstractas/entity/ProductoFresco.class
+ies/puerto/modelo/impl/Souvenir.class

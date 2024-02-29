@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="14942929-cb4c-4d25-8f92-33e14d80f708" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Examenes/Supuestos/SimulacroExamenArrayHashSetMap/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Examenes/Supuestos/SimulacroExamenArrayHashSetMap/src/main/java/es/ies/puerto/App/AppTienda.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Examenes/Supuestos/SimulacroExamenArrayHashSetMap/src/main/java/es/ies/puerto/App/AppTienda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Examenes/Supuestos/SimulacroExamenArrayHashSetMap/src/main/java/es/ies/puerto/Productos/Alimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Examenes/Supuestos/SimulacroExamenArrayHashSetMap/src/main/java/es/ies/puerto/Productos/Alimento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosArrayListHashSetMap/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EjerciciosArrayListHashSetMap/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosArrayListHashSetMap/src/main/java/es/ies/puerto/PrimeraParte/vehiculos/Concesionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EjerciciosArrayListHashSetMap/src/main/java/es/ies/puerto/PrimeraParte/vehiculos/Concesionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio1/AppArrayList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio10/AppOrdenarNombres.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio2/AppOperacionesArrayList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio3/Alumno.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio3/AppAula.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio3/Aula.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio4/AppElementoComun.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio5/AppChooser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio7/AppEliminarDuplicados.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio8/AppMayoresDiez.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio9/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio9/RegistroCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/abstrac/EmpleadoAbstract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/abstrac/PersonaAbstract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/abstrac/TrabajadorAbstract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/app/AppEducacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/impl/Alumno.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/impl/Aula.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/impl/Colegio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/impl/Nota.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/impl/Profesor.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2bS1BMGr1QOmIcW0gFtKGrghZg5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/dam/PeterMartEsc/PRO/Examenes/Supuestos/SimulacroExamenArrayHashSetMap"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="AppAula" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ies.puerto.PrimeraParte.ejercicio3.AppAula" />
+      <module name="EjerciciosListasArray" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ies.puerto.PrimeraParte.ejercicio3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AppAula" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14942929-cb4c-4d25-8f92-33e14d80f708" name="Changes" comment="" />
+      <created>1706193529367</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706193529367</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="38637b8f-c468-4ff5-a73f-e4dfbaf68eaf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Examenes/Supuestos/SimulacroExamenArrayHashSetMap/src/main/java/es/ies/puerto/App/AppTienda.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Examenes/Supuestos/SimulacroExamenArrayHashSetMap/src/main/java/es/ies/puerto/App/AppTienda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Examenes/Supuestos/SimulacroExamenArrayHashSetMap/src/main/java/es/ies/puerto/Productos/Alimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Examenes/Supuestos/SimulacroExamenArrayHashSetMap/src/main/java/es/ies/puerto/Productos/Alimento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/ies/puerto/PrimeraParte/vehiculos/Concesionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/ies/puerto/PrimeraParte/vehiculos/Concesionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio1/AppArrayList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio10/AppOrdenarNombres.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio2/AppOperacionesArrayList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio3/Alumno.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio3/AppAula.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio3/Aula.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio4/AppElementoComun.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio5/AppChooser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio7/AppEliminarDuplicados.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio8/AppMayoresDiez.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio9/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/PrimeraParte/ejercicio9/RegistroCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/abstrac/EmpleadoAbstract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/abstrac/PersonaAbstract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/abstrac/TrabajadorAbstract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/app/AppEducacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/impl/Alumno.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/impl/Aula.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/impl/Colegio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/impl/Nota.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosListasArray/src/main/java/ies/puerto/SegundaParte/impl/Profesor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticandoFicherosConExámen/src/main/java/ies/puerto/presentacion/app/AppTienda.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticandoFicherosConExámen/src/main/java/ies/puerto/presentacion/app/AppTienda.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2c5ZyRPadyGGZPhSq7xZLv2Vhb4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/dam/PeterMartEsc/PRO/Unidad-5/EjerciciosArrayListHashSetMap&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38637b8f-c468-4ff5-a73f-e4dfbaf68eaf" name="Changes" comment="" />
+      <created>1707403653644</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707403653644</updated>
+    </task>
+    <servers />
+  </component>
+</project>
