@@ -1,10 +1,12 @@
 package ies.puerto.modelo.impl.csv.implementation;
 
 import ies.puerto.modelo.abstractas.entity.Producto;
+import ies.puerto.modelo.abstractas.entity.ProductoFresco;
 import ies.puerto.modelo.abstractas.file.FicheroAbstracta;
 import ies.puerto.modelo.impl.Alimento;
 import ies.puerto.modelo.impl.Aparato;
 import ies.puerto.modelo.impl.CuidadoPersonal;
+import ies.puerto.modelo.impl.Souvenir;
 import ies.puerto.modelo.interfaces.file.IFileInterface;
 
 import java.io.*;
@@ -56,12 +58,15 @@ public class CsvFileCrudOperaciones extends FicheroAbstracta implements IFileInt
                             case "alimento":
                                 productos.add(splitToAlimento(arrayElemento));
                                 break;
+                            case "aparato":
+                                productos.add(splitToAparato(arrayElemento)) ;
+                                break;
+                            case "souvenir":
+                                productos.add(splitToSouvenir(arrayElemento)) ;
+                                break;
                             case "cuidado":
                                 productos.add(splitToCuidadoPersonal(arrayElemento));
                                 break;
-                            default:
-                                productos.add(splitToDefault(arrayElemento)) ;
-                                break;//Mostrar error;
                         }
                     }
                     i++;
@@ -82,21 +87,30 @@ public class CsvFileCrudOperaciones extends FicheroAbstracta implements IFileInt
     }
 
     private Alimento splitToAlimento(String[] splitArray){
-        Alimento alimento = new Alimento( splitArray[0], splitArray[1], Float.parseFloat(splitArray[2]),
+        Alimento alimento = new Alimento( splitArray[0], Float.parseFloat(splitArray[1]), splitArray[2],
                 splitArray[3], splitArray[4] );
 
         return alimento;
     }
-    private Aparato splitToDefault(String[] splitArray) {
-        Aparato aparato = new Aparato( splitArray[3], splitArray[0], Float.parseFloat(splitArray[1]),
-                splitArray[2] );
+
+    private Aparato splitToAparato(String[] splitArray) {
+        Aparato aparato = new Aparato( splitArray[0], Float.parseFloat(splitArray[1]), splitArray[2],
+                splitArray[3]);
 
         return aparato;
     }
+
+    private Souvenir splitToSouvenir(String[] splitArray) {
+        Souvenir souvenir = new Souvenir( splitArray[0], Float.parseFloat(splitArray[1]), splitArray[2],
+                splitArray[3]);
+
+        return souvenir;
+    }
     private CuidadoPersonal splitToCuidadoPersonal(String[] splitArray) {
-        CuidadoPersonal cuidadoPersonal = new CuidadoPersonal( splitArray[3], splitArray[0],
-                Float.parseFloat(splitArray[1]), splitArray[2], Integer.parseInt(splitArray[4]) );
+        CuidadoPersonal cuidadoPersonal = new CuidadoPersonal( splitArray[0], Float.parseFloat(splitArray[1]),
+                splitArray[2], splitArray[3], Integer.parseInt(splitArray[4]) );
 
         return cuidadoPersonal;
     }
+
 }

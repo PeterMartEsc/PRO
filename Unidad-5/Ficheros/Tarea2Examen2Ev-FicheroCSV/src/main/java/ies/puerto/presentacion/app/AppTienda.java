@@ -4,6 +4,7 @@ import ies.puerto.modelo.impl.Alimento;
 import ies.puerto.modelo.impl.Aparato;
 import ies.puerto.modelo.impl.CuidadoPersonal;
 import ies.puerto.modelo.impl.Souvenir;
+import ies.puerto.modelo.impl.csv.implementation.CsvFileCrudOperaciones;
 import ies.puerto.negocio.Tienda;
 
 import java.text.ParseException;

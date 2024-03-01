@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e60cd685-cd26-4857-a179-505b4e048a7a" name="Changes" comment="" />
+    <list default="true" id="e60cd685-cd26-4857-a179-505b4e048a7a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/PtracticandoFicherosProfe",
+    "last_opened_file_path": "/home/dam/PeterMartEsc/PRO/Unidad-5/Ficheros/Tarea2Examen2Ev-FicheroCSV",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -48,7 +50,7 @@
       <recent name="ies.puerto" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.AppAula">
     <configuration name="AppAula" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ies.puerto.ejercicios.tres.AppAula" />
       <module name="examen" />
