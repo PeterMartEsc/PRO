@@ -16,27 +16,18 @@ import java.util.Scanner;
 public class AppTienda {
 
     static Tienda tienda;
+    static CsvFileCrudOperaciones csvFileCrudOperaciones;
 
     static ArrayList<Alimento> alimentos;
-    static Alimento alimento1;
-    static Alimento alimento2;
-    static Alimento alimento3;
 
     static ArrayList<Aparato> aparatos;
-    static Aparato aparato1;
-    static Aparato aparato2;
-    static Aparato aparato3;
+
 
     static HashMap<String, Souvenir> souvenirs;
-    static Souvenir souvenir1;
-    static Souvenir souvenir2;
-    static Souvenir souvenir3;
+
 
     static HashSet<CuidadoPersonal> cuidadosPersonales;
 
-    static CuidadoPersonal cPersonal1;
-    static CuidadoPersonal cPersonal2;
-    static CuidadoPersonal cPersonal3;
 
 
     public static void main(String[] args) throws ParseException {
@@ -55,56 +46,37 @@ public class AppTienda {
 
        tienda = new Tienda(alimentos, aparatos, souvenirs, cuidadosPersonales);
        alimentos = new ArrayList<>();
-       alimento1 = new Alimento("Manzanas",2.50f,"2024-01-09","ALM001","2024-01-15");
-       alimento2 = new Alimento("Leche", 1.99f, "2024-02-09", "ALM002", "2024-02-14");
-       alimento3 = new Alimento("Arroz",3.75f,"2024-01-15","ALM003","2024-01-27");
-
        aparatos = new ArrayList<>();
-       aparato1 = new Aparato("Televisor LED",499.99f,"2024-02-09","APA001");
-       aparato2 = new Aparato("Smartphone",799.99f,"2024-02-09","APA002");
-       aparato3 = new Aparato("Cafetera",39.99f,"2024-02-09","APA003");
-
        souvenirs = new HashMap<>();
-       souvenir1 = new Souvenir("Imán de nevera",1.99f,"2024-02-09","SOU001");
-       souvenir2 = new Souvenir("Llavero",0.99f,"2024-02-09","SOU002");
-       souvenir3 = new Souvenir("Taza de café",3.49f,"2024-02-09","SOU003");
-
        cuidadosPersonales = new HashSet<>();
-       cPersonal1 = new CuidadoPersonal("Champú",3.99f,"2024-02-09","CUI001", 7);
-       cPersonal2 = new CuidadoPersonal("Crema hidratante",5.49f,"2024-02-09","CUI002", 8);
-       cPersonal3 = new CuidadoPersonal("Cepillo de dientes",2.29f,"2024-02-09","CUI003", 6);
 
     }
 
     public static void aniadirAlimentos(){
 
-        alimentos.add(alimento1);
-        alimentos.add(alimento2);
-        alimentos.add(alimento3);
+        //hacer set a CsvFile.... ?
+        //llamar a los métodos que añaden a partir de un fichero?
         tienda.setAlimentos(alimentos);
     }
 
     public static void aniadirAparatos(){
 
-        aparatos.add(aparato1);
-        aparatos.add(aparato2);
-        aparatos.add(aparato3);
+        //hacer set a CsvFile.... ?
+        //llamar a los métodos que añaden a partir de un fichero?
         tienda.setAparatos(aparatos);
     }
 
     public static void aniadirSouvenirs(){
 
-        souvenirs.put(souvenir1.getId(), souvenir1);
-        souvenirs.put(souvenir2.getId(), souvenir2);
-        souvenirs.put(souvenir3.getId(), souvenir3);
+        //hacer set a CsvFile.... ?
+        //llamar a los métodos que añaden a partir de un fichero?
         tienda.setSouvenirs(souvenirs);
     }
 
     public static void aniadirCuidadosPersonal(){
 
-        cuidadosPersonales.add(cPersonal1);
-        cuidadosPersonales.add(cPersonal2);
-        cuidadosPersonales.add(cPersonal3);
+        //hacer set a CsvFile.... ?
+        //llamar a los métodos que añaden a partir de un fichero?
         tienda.setCuidadosPersonales(cuidadosPersonales);
     }
 

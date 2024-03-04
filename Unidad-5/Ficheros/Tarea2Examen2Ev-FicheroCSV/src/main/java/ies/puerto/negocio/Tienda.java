@@ -260,6 +260,7 @@ public class Tienda {
     }
 
     public float precioTotalTienda() throws ParseException {
+
         float resultado = 0f;
 
         return resultado = precioTotalAlimentos()+precioTotalAparatos()+precioTotalSouvenirs()
