@@ -43,16 +43,34 @@ public class FileCsvTest {
 
     @Test
     public void aniadirPersonaTest(){
+
         String nombreInsertar = "otro";
         int edadInsertar = 99;
         String emailInsertar = "otro@email";
         int numPersonas = personas.size();
-        Persona personaInsertar = new Persona(5, nombreInsertar,
-                edadInsertar, emailInsertar);
+        Persona personaInsertar = new Persona(5, nombreInsertar, edadInsertar, emailInsertar);
+
         fileCsv.aniadirPersona(personaInsertar);
         personas = fileCsv.obtenerPersonas();
         int numPersonasInsertar = personas.size();
-        Assertions.assertTrue(personas.contains(personaInsertar), "No se ha encontrado a la persona");
-        Assertions.assertEquals(numPersonas+1, numPersonasInsertar, "No se ha obtenido el numero esperado");
+        Assertions.assertTrue(personas.contains(personaInsertar),
+                "No se ha encontrado a la persona");
+        Assertions.assertEquals(numPersonas+1, numPersonasInsertar,
+                "No se ha obtenido el numero esperado");
+    }
+
+    @Test
+    public void eliminarPersonaTest(){
+        int idEliminar = 2;
+
+        int numPersonas = personas.size();
+
+        fileCsv.eliminarPersona(idEliminar);
+        personas = fileCsv.obtenerPersonas();
+
+        int numPersonasEliminar = personas.size();
+
+        Assertions.assertEquals(numPersonas-1, numPersonasEliminar,
+                "No se ha obtenido el numero de personas esperado");
     }
 }

@@ -95,4 +95,18 @@ public class FileCsv extends UtilidadesClass {
             }
         }
     }
+
+    public void eliminarPersona(int id) {
+        List<Persona> personas = obtenerPersonas();
+        try (FileWriter writer = new FileWriter(path)) {
+            writer.write("id,nombre,edad,email\n");
+            for (Persona persona : personas) {
+                if (persona.getId() != id) {
+                    writer.write(persona.getId() + "," + persona.getNombre() + "," + persona.getEdad() + "," + persona.getEmail() + "\n");
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
