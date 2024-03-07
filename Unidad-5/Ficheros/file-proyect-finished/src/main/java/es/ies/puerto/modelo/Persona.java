@@ -17,6 +17,8 @@ public class Persona extends UtilidadesClass {
     @Element(name="email")
     String email;
 
+    public Persona(){}
+
     public Persona (int id) {
         this.id= id;
     }

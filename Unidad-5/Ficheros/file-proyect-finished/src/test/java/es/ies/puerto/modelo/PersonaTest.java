@@ -62,11 +62,30 @@ public class PersonaTest {
 
     @Test
     public void personaToXMLTest(){
-        //Accion para escribir en ficheros (serializar)
+
+        //Accion para escribir/leer en ficheros (serializar)
         Persister serializer = new Persister();
         try {
             //Escribir objeto (persona) en el fichero persona.xml (como no existe, lo crea en raiz)
             serializer.write(persona, new File("src/main/resources/persona.xml"));
+        } catch (Exception e) {
+            Assertions.fail(e.getMessage());
+        }
+    }
+
+    @Test
+    public void xmlToPersonaTest(){
+
+        Persister serializer = new Persister();
+
+        try {
+            File file = new File("src/main/resources/persona.xml");
+            Persona persona = serializer.read(Persona.class, file);
+
+            Assertions.assertEquals(nombre, persona.getNombre(), "No se ha obtenido el valor esperado");
+            Assertions.assertEquals(id, persona.getId(), "No se ha obtenido el valor esperado");
+            Assertions.assertEquals(edad, persona.getEdad(), "No se ha obtenido el valor esperado");
+            Assertions.assertEquals(email, persona.getEmail(), "No se ha obtenido el valor esperado");
         } catch (Exception e) {
             Assertions.fail(e.getMessage());
         }
