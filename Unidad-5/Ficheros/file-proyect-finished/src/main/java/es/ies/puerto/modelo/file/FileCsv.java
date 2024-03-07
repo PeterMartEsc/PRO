@@ -2,12 +2,15 @@ package es.ies.puerto.modelo.file;
 
 import es.ies.puerto.modelo.Persona;
 import es.ies.puerto.utilidades.UtilidadesClass;
+import org.simpleframework.xml.Element;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FileCsv extends UtilidadesClass {
+    @Element(name="persona")
+    List<Persona> personas;
     String path="src/main/resources/data.csv";
 
     public List<Persona> obtenerPersonas() {

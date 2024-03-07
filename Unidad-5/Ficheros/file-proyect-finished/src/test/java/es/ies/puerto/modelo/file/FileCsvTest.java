@@ -47,26 +47,32 @@ public class FileCsvTest {
     public void addDeletePersonaTest() {
 
         int numPersonasInicial = personas.size();
+
         Persona personaInsertar = new Persona(5, nombreInsertar,
                 edadInsertar,emailInsertar);
         fileCsv.addPersona(personaInsertar);
         personas = fileCsv.obtenerPersonas();
+
         int numPersonasInsertar = personas.size();
+
         Assertions.assertTrue(personas.contains(personaInsertar),
                 "No se ha encontrado a la persona");
         Assertions.assertEquals(numPersonasInicial +1 ,
                 numPersonasInsertar,
                 "No se ha obtenido el numero esperado");
+
         fileCsv.deletePersona(personaInsertar);
         personas = fileCsv.obtenerPersonas();
+
         int numPersonasBorrado = personas.size();
+
         Assertions.assertEquals(numPersonasInicial ,
                 numPersonasBorrado,
                 "No se ha obtenido el numero esperado");
     }
 
     @Test
-    public void actualizarPersona() {
+    public void actualizarPersonaTest() {
         int idActualizar = 2;
         Persona personaBuscar = new Persona(idActualizar);
         Persona personaActualizar = fileCsv.obtenerPersona(personaBuscar);
@@ -80,8 +86,5 @@ public class FileCsvTest {
         Assertions.assertEquals(personaBuscar.toString(), personaActualizar.toString(),
                 "Los datos actualizados no son los esperados");
         fileCsv.updatePersona(personaBackup);
-
-
-
     }
 }
