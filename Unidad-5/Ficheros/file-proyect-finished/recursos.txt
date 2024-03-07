@@ -1,0 +1,136 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        // Crear instancia de la clase CRUD
+        CRUD crud = new CRUD("data.csv");
+
+        // Leer todos los registros
+        List<Persona> personas = crud.readAll();
+        System.out.println("Registros actuales:");
+        for (Persona persona : personas) {
+            System.out.println(persona);
+        }
+
+        // Crear un nuevo registro
+        Persona nuevaPersona = new Persona(5, "Maria Garcia", 32, "mariagarcia@example.com");
+        crud.create(nuevaPersona);
+        System.out.println("\nNuevo registro añadido:");
+
+        // Leer todos los registros nuevamente después de la creación
+        personas = crud.readAll();
+        for (Persona persona : personas) {
+            System.out.println(persona);
+        }
+
+        // Actualizar un registro existente
+        Persona personaActualizar = personas.get(2); // Supongamos que queremos actualizar el tercer registro
+        personaActualizar.setEdad(36);
+        crud.update(personaActualizar);
+        System.out.println("\nRegistro actualizado:");
+
+        // Leer todos los registros después de la actualización
+        personas = crud.readAll();
+        for (Persona persona : personas) {
+            System.out.println(persona);
+        }
+
+        // Eliminar un registro
+        crud.delete(1); // Supongamos que queremos eliminar el registro con ID 1
+        System.out.println("\nRegistro eliminado:");
+
+        // Leer todos los registros después de la eliminación
+        personas = crud.readAll();
+        for (Persona persona : personas) {
+            System.out.println(persona);
+        }
+    }
+}
+
+class Persona {
+    private int id;
+    private String nombre;
+    private int edad;
+    private String email;
+
+    public Persona(int id, String nombre, int edad, String email) {
+        this.id = id;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.email = email;
+    }
+
+    // Getters y setters
+
+    @Override
+    public String toString() {
+        return "ID: " + id + ", Nombre: " + nombre + ", Edad: " + edad + ", Email: " + email;
+    }
+}
+
+class CRUD {
+    private String archivoCSV;
+
+    public CRUD(String archivoCSV) {
+        this.archivoCSV = archivoCSV;
+    }
+
+    public List<Persona> readAll() {
+        List<Persona> personas = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoCSV))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                String[] datos = linea.split(",");
+                int id = Integer.parseInt(datos[0]);
+                String nombre = datos[1];
+                int edad = Integer.parseInt(datos[2]);
+                String email = datos[3];
+                personas.add(new Persona(id, nombre, edad, email));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return personas;
+    }
+
+    public void create(Persona persona) {
+        try (FileWriter writer = new FileWriter(archivoCSV, true)) {
+            writer.write(persona.getId() + "," + persona.getNombre() + "," + persona.getEdad() + "," + persona.getEmail() + "\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void update(Persona persona) {
+        List<Persona> personas = readAll();
+        try (FileWriter writer = new FileWriter(archivoCSV)) {
+            for (Persona p : personas) {
+                if (p.getId() == persona.getId()) {
+                    writer.write(persona.getId() + "," + persona.getNombre() + "," + persona.getEdad() + "," + persona.getEmail() + "\n");
+                } else {
+                    writer.write(p.getId() + "," + p.getNombre() + "," + p.getEdad() + "," + p.getEmail() + "\n");
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void delete(int id) {
+        List<Persona> personas = readAll();
+        try (FileWriter writer = new FileWriter(archivoCSV)) {
+            for (Persona persona : personas) {
+                if (persona.getId() != id) {
+                    writer.write(persona.getId() + "," + persona.getNombre() + "," + persona.getEdad() + "," + persona.getEmail() + "\n");
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
