@@ -1,0 +1,28 @@
+{
+  "personas": [
+    {
+      "id": 1,
+      "nombre": "John Doe",
+      "edad": 30,
+      "correo": "johndoe@example.com"
+    },
+    {
+      "id": 2,
+      "nombre": "otro",
+      "edad": 99,
+      "correo": "otro@email"
+    },
+    {
+      "id": 3,
+      "nombre": "Michael Johnson",
+      "edad": 35,
+      "correo": "michaeljohnson@example.com"
+    },
+    {
+      "id": 4,
+      "nombre": "Emily Davis",
+      "edad": 28,
+      "correo": "emilydavis@example.com"
+    }
+  ]
+}

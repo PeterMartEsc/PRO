@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-public class FileCsvTest {
+public class FileJsonTest {
 
     String nombreInsertar = "otro";
     int edadInsertar = 99;
@@ -20,7 +20,7 @@ public class FileCsvTest {
 
     @BeforeEach
     public void beforeEach() {
-        persistencia = new FileCsv();
+        persistencia = new FileJson();
         personas = persistencia.obtenerPersonas();
     }
 

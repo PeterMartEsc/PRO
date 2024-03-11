@@ -1,27 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <personas>
-    <persona>
-        <id>1</id>
-        <nombre>John Doe</nombre>
-        <edad>30</edad>
-        <email>johndoe@example.com</email>
-    </persona>
-    <persona>
-        <id>2</id>
-        <nombre>Jane Smith</nombre>
-        <edad>25</edad>
-        <email>janesmith@example.com</email>
-    </persona>
-    <persona>
-        <id>3</id>
-        <nombre>Michael Johnson</nombre>
-        <edad>35</edad>
-        <email>michaeljohnson@example.com</email>
-    </persona>
-    <persona>
-        <id>4</id>
-        <nombre>Emily Davis</nombre>
-        <edad>28</edad>
-        <email>emilydavis@example.com</email>
-    </persona>
+   <persona>
+      <id>1</id>
+      <nombre>John Doe</nombre>
+      <edad>30</edad>
+      <email>johndoe@example.com</email>
+   </persona>
+   <persona>
+      <id>2</id>
+      <nombre>otro</nombre>
+      <edad>99</edad>
+      <email>otro@email</email>
+   </persona>
+   <persona>
+      <id>3</id>
+      <nombre>Michael Johnson</nombre>
+      <edad>35</edad>
+      <email>michaeljohnson@example.com</email>
+   </persona>
+   <persona>
+      <id>4</id>
+      <nombre>Emily Davis</nombre>
+      <edad>28</edad>
+      <email>emilydavis@example.com</email>
+   </persona>
 </personas>

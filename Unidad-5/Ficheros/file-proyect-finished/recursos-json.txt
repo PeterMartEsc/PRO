@@ -1,0 +1,138 @@
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+
+    private static final String JSON_FILE_PATH = "datos.json";
+
+    public static void main(String[] args) {
+        List<Persona> personas = cargarDatos();
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Opciones:");
+            System.out.println("1. Listar personas");
+            System.out.println("2. Agregar persona");
+            System.out.println("3. Actualizar persona");
+            System.out.println("4. Eliminar persona");
+            System.out.println("5. Salir");
+            System.out.print("Seleccione una opción: ");
+            int opcion = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcion) {
+                case 1:
+                    listarPersonas(personas);
+                    break;
+                case 2:
+                    agregarPersona(scanner, personas);
+                    break;
+                case 3:
+                    actualizarPersona(scanner, personas);
+                    break;
+                case 4:
+                    eliminarPersona(scanner, personas);
+                    break;
+                case 5:
+                    guardarDatos(personas);
+                    System.out.println("Saliendo...");
+                    return;
+                default:
+                    System.out.println("Opción inválida");
+            }
+        }
+    }
+
+    private static List<Persona> cargarDatos() {
+        try {
+            String json = new String(Files.readAllBytes(Paths.get(JSON_FILE_PATH)));
+            Type listType = new TypeToken<ArrayList<Persona>>(){}.getType();
+            return new Gson().fromJson(json, listType);
+        } catch (IOException e) {
+            System.err.println("Error al cargar datos: " + e.getMessage());
+            return new ArrayList<>();
+        }
+    }
+
+    private static void guardarDatos(List<Persona> personas) {
+        try (FileWriter writer = new FileWriter(JSON_FILE_PATH)) {
+            new GsonBuilder().setPrettyPrinting().create().toJson(personas, writer);
+        } catch (IOException e) {
+            System.err.println("Error al guardar datos: " + e.getMessage());
+        }
+    }
+
+    private static void listarPersonas(List<Persona> personas) {
+        if (personas.isEmpty()) {
+            System.out.println("No hay personas registradas");
+        } else {
+            System.out.println("Listado de personas:");
+            for (Persona persona : personas) {
+                System.out.println(persona);
+            }
+        }
+    }
+
+    private static void agregarPersona(Scanner scanner, List<Persona> personas) {
+        System.out.print("Ingrese el nombre: ");
+        String nombre = scanner.nextLine();
+        System.out.print("Ingrese la edad: ");
+        int edad = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Ingrese el correo: ");
+        String correo = scanner.nextLine();
+
+        personas.add(new Persona(nombre, edad, correo));
+        System.out.println("Persona agregada exitosamente");
+    }
+
+    private static void actualizarPersona(Scanner scanner, List<Persona> personas) {
+        System.out.print("Ingrese el ID de la persona a actualizar: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+
+        for (Persona persona : personas) {
+            if (persona.getId() == id) {
+                System.out.print("Ingrese el nuevo nombre: ");
+                String nombre = scanner.nextLine();
+                System.out.print("Ingrese la nueva edad: ");
+                int edad = scanner.nextInt();
+                scanner.nextLine();
+                System.out.print("Ingrese el nuevo correo: ");
+                String correo = scanner.nextLine();
+
+                persona.setNombre(nombre);
+                persona.setEdad(edad);
+                persona.setCorreo(correo);
+                System.out.println("Persona actualizada exitosamente");
+                return;
+            }
+        }
+        System.out.println("No se encontró ninguna persona con el ID proporcionado");
+    }
+
+    private static void eliminarPersona(Scanner scanner, List<Persona> personas) {
+        System.out.print("Ingrese el ID de la persona a eliminar: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+
+        for (Persona persona : personas) {
+            if (persona.getId() == id) {
+                personas.remove(persona);
+                System.out.println("Persona eliminada exitosamente");
+                return;
+            }
+        }
+        System.out.println("No se encontró ninguna persona con el ID proporcionado");
+    }
+}
