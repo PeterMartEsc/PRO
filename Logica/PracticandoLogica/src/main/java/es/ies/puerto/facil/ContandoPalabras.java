@@ -21,6 +21,7 @@ public class ContandoPalabras {
                     "para controlar a todos los demás, en ese anillo descargó toda su crueldad su malicia " +
                     "y su voluntad de dominar todo tipo de vida, un anillo para gobernarlos a todos";
 
+    String cadenaDef = cadena.toLowerCase();
     String DELIMITADOR1 = " ";
     String DELIMITADOR2 = ","+DELIMITADOR1;
     String DELIMITADOR3 = "."+DELIMITADOR1;
