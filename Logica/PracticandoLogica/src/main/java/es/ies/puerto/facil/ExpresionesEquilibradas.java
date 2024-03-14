@@ -1,10 +1,12 @@
 package es.ies.puerto.facil;
 
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class ExpresionesEquilibradas {
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Introduzca una cadena de texto: ");
         String Str1 = scanner.nextLine();
@@ -17,35 +19,30 @@ public class ExpresionesEquilibradas {
         String out1 = "";
         String out2 = "";
 
-        if(size2>size1){
-            String temp = Str1;
-            Str1 = Str2;
-            Str2 = temp;
+        HashSet<Character> set1 = new HashSet<>();
+        HashSet<Character> set2 = new HashSet<>();
+
+        for(char caracter : Str1.toCharArray()){
+            set1.add(caracter);
         }
 
+        for(char caracter : Str2.toCharArray()){
+            set2.add(caracter);
+        }
 
-        for(int i=0; i < size1 ; i++){
-            int contador = 0;
-            char caracter1 = Str1.charAt(i);
-            for(int j = 0; j<size2;j++){
-                char caracter2 = Str2.charAt(i);
-                if(caracter1 == caracter2){
-                    out1 = caracter1 + out1;
-                    contador++;
-                }
-            }
-            if(contador ==0){
-                out2 = caracter1 + out2;
+        for(char caracter : set1){
+            if(!set2.contains(caracter)){
+                out1+=caracter;
             }
         }
 
-        if(size2>size1){
-            String temp = out1;
-            out1 = out2;
-            out2 = temp;
+        for(char caracter : set2){
+            if(!set1.contains(caracter)){
+                out2+=caracter;
+            }
         }
-        System.out.println("Los elementos presentes en " +Str1+ " y no presentes en " +Str2+ " son: " +out1);
-        System.out.println("Los elementos presentes en " +Str2+ " y no presentes en " +Str1+ " son: " +out2);
 
+        System.out.println("Los elementos de " +Str1+ " no hallados en " +Str2+ " son los siguientes: \n" +out1);
+        System.out.println("Los elementos de " +Str2+ " no hallados en " +Str1+ " son los siguientes: \n" +out2);
     }
 }

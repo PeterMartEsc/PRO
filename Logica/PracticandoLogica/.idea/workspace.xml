@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9600e9d0-5591-4c42-ad90-4800c6778f27" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/ies/puerto/facil/DecimalBinario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/ies/puerto/facil/ExpresionesEquilibradas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/ies/puerto/facil/ConversorTiempo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/ies/puerto/facil/EnMayuscula.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/ies/puerto/facil/NumerosNarcisistas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ConversorTiempoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/ies/puerto/facil/ContandoPalabras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/ies/puerto/facil/ContandoPalabras.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/es/ies/puerto/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/es/ies/puerto/facil/InvertirCadena.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/ies/puerto/facil/InvertirCadena.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/ies/puerto/facil/ExpresionesEquilibradas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/ies/puerto/facil/ExpresionesEquilibradas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/es/ies/puerto/facil/ExpresionesEquilibradas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/ies/puerto/facil/ExpresionesEquilibradas.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
