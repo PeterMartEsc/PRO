@@ -23,7 +23,17 @@ public class Hechicero {
             }
         }
 
-        
+        Integer temp = 0;
+
+        for(int i =0; i<vocales.size(); i++){
+            Integer valor = vocales.get(i);
+            if(valor>temp){
+                temp = valor;
+                valor= temp;
+            }
+        }
+
+        vocal = 
 
         return vocal;
     }
