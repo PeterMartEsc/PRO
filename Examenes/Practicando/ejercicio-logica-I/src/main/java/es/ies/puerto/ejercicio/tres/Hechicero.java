@@ -19,7 +19,7 @@ public class Hechicero {
         for(int i = 0; i<textoDefinitivo.length(); i++){
             char vocalSeleccionada = textoDefinitivo.charAt(i);
             if(vocales.containsKey(vocalSeleccionada)){
-                vocales.replace(vocalSeleccionada, );
+                //vocales.replace(vocalSeleccionada, );
             }
         }
 
