@@ -1,0 +1,22 @@
+[
+  {
+    "nombre": "Iron Man",
+    "alias": "Tony Stark",
+    "genero": "Masculino",
+    "poderes": [
+      "Vuelo",
+      "Armadura tecnológica avanzada",
+      "Rayos láser"
+    ]
+  },
+  {
+    "nombre": "Spider-Man",
+    "alias": "Peter Parker",
+    "genero": "Masculino",
+    "poderes": [
+      "Agilidad sobrehumana",
+      "Trepamuros",
+      "Sentido arácnido"
+    ]
+  }
+]

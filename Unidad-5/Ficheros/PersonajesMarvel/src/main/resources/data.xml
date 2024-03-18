@@ -1,0 +1,22 @@
+<personajes>
+    <personaje>
+        <nombre>Iron Man</nombre>
+        <alias>Tony Stark</alias>
+        <genero>Masculino</genero>
+        <poderes>
+            <poder>Vuelo</poder>
+            <poder>Armadura tecnológica avanzada</poder>
+            <poder>Rayos láser</poder>
+        </poderes>
+    </personaje>
+    <personaje>
+        <nombre>Spider-Man</nombre>
+        <alias>Peter Parker</alias>
+        <genero>Masculino</genero>
+        <poderes>
+            <poder>Agilidad sobrehumana</poder>
+            <poder>Trepamuros</poder>
+            <poder>Sentido arácnido</poder>
+        </poderes>
+    </personaje>
+</personajes>
