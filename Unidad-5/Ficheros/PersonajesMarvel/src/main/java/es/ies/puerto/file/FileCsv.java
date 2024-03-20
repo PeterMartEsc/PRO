@@ -32,13 +32,13 @@ public class FileCsv extends UtilidadesClass implements ICrudOperations {
                     String alias = datos[0];
                     String nombre = datos[1];
                     String genero = datos[2];
-                    String poder = datos[3];
-                    String[] poderes = poder.split(DELIMITADOR2);
-                    for(String poderSeleccionado : poderes){
-                        //Añadir cada poder a la lista de poderes
+                    List<String> poderes = new ArrayList<>();
+                    for(int i = 3; i < datos.length ; i++){
+                        datos[i] = datos[i].replaceAll("\"", "").trim();
+                        poderes.add(datos[i]);
                     }
-                    //Persona persona = new Persona(alias, nombre, genero, poder);
-                    //personas.add(persona);
+                    SuperHeroe superHeroe = new SuperHeroe(alias, nombre, genero, poderes);
+                    superHeroes.add(superHeroe);
                 }
                 contador++;
             }
@@ -62,18 +62,21 @@ public class FileCsv extends UtilidadesClass implements ICrudOperations {
             while (((linea = br.readLine()) != null) && !encontrado) {
 
                 if (contador > 0) {
-                String[] datos = linea.split(DELIMITADOR);
-                String alias = datos[0];
-                if (alias == superHeroe.getAlias()) {
-                    String nombre = datos[1];
-                    String genero = datos[2];
-                    String poderes = datos[3];
-                    superHeroe.setNombre(nombre);
-                    superHeroe.setGenero(genero);
-                    //Arreglar aquí
-                    superHeroe.setPoderes(poderes);
-                    encontrado = true;
-                }
+                    String[] datos = linea.split(DELIMITADOR);
+                    String alias = datos[0];
+
+                    if (alias == superHeroe.getAlias()) {
+                        String nombre = datos[1];
+                        String genero = datos[2];
+                        superHeroe.setNombre(nombre);
+                        superHeroe.setGenero(genero);
+                        List<String> poderes = new ArrayList<>();
+                        for(int i = 3; i < datos.length ; i++){
+                            poderes.add(datos[i]);
+                        }
+                        superHeroe.setPoderes(poderes);
+                        encontrado = true;
+                    }
                 }
                 contador++;
             }

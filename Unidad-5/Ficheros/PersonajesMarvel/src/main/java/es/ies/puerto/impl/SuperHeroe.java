@@ -14,7 +14,7 @@ public class SuperHeroe extends UtilidadesClass {
 
     private String genero;
 
-    private List<Poder> poderes;
+    private List<String> poderes;
 
     public SuperHeroe(){
 
@@ -25,11 +25,11 @@ public class SuperHeroe extends UtilidadesClass {
         this.poderes = new ArrayList<>();
     }
 
-    public SuperHeroe(String nombre, String alias, String genero, List<Poder> poderes) {
+    public SuperHeroe(String nombre, String alias, String genero, List<String> poderes) {
         this.nombre = nombre;
         this.alias = alias;
         this.genero = genero;
-        this.poderes = poderes;
+        this.poderes = new ArrayList<>();
     }
 
     public String getNombre() {
@@ -44,7 +44,7 @@ public class SuperHeroe extends UtilidadesClass {
         return genero;
     }
 
-    public List<Poder> getPoderes() {
+    public List<String> getPoderes() {
         return poderes;
     }
 
@@ -56,7 +56,7 @@ public class SuperHeroe extends UtilidadesClass {
         this.genero = genero;
     }
 
-    public void setPoderes(List<Poder> poderes) {
+    public void setPoderes(List<String> poderes) {
         this.poderes = poderes;
     }
 
@@ -84,7 +84,11 @@ public class SuperHeroe extends UtilidadesClass {
     }
 
     public String toCsv() {
-        return alias + DELIMITADOR + nombre
-                + DELIMITADOR + genero + DELIMITADOR + DELIMITADOR2 + poderes;
+        
+        String resultado = alias + DELIMITADOR + nombre + DELIMITADOR + genero + DELIMITADOR + "\n";
+        for(String poder : poderes){
+            
+        }
+        return resultado;
     }
 }
