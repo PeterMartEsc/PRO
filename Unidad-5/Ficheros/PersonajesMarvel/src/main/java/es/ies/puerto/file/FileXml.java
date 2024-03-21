@@ -7,12 +7,21 @@ import es.ies.puerto.utilities.UtilidadesClass;
 import org.simpleframework.xml.core.Persister;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FileXml extends UtilidadesClass implements ICrudOperations {
 
     List<SuperHeroe> superHeroes;
     String path="src/main/resources/data.xml";
+
+    public FileXml(){
+
+    }
+
+    public FileXml(List<SuperHeroe> superHeroes) {
+        this.superHeroes = new ArrayList<>();
+    }
 
     @Override
     public List<SuperHeroe> obtenerSuperHeroes() {

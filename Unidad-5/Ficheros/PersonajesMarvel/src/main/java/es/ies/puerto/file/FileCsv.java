@@ -16,6 +16,14 @@ public class FileCsv extends UtilidadesClass implements ICrudOperations {
     List<SuperHeroe> superHeroes;
     String path="src/main/resources/data.csv";
 
+    public FileCsv(){
+
+    }
+
+    public FileCsv(List<SuperHeroe> superHeroes) {
+        this.superHeroes = new ArrayList<>();
+    }
+
     public List<SuperHeroe> obtenerSuperHeroes() {
 
         List<SuperHeroe> superHeroes = new ArrayList<>();

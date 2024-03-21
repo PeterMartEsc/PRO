@@ -5,19 +5,27 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import es.ies.puerto.impl.SuperHeroe;
 import es.ies.puerto.interfaces.ICrudOperations;
+import es.ies.puerto.utilities.UtilidadesClass;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
-public class FileJson implements ICrudOperations {
+public class FileJson extends UtilidadesClass implements ICrudOperations {
 
     List<SuperHeroe> superheroes;
     String path="src/main/resources/data.json";
 
+    public FileJson(){
+
+    }
+    public FileJson(List<SuperHeroe> superheroes) {
+        this.superheroes = new ArrayList<>();
+    }
 
     @Override
     public List<SuperHeroe> obtenerSuperHeroes() {

@@ -44,22 +44,22 @@ public class FileCsvTest {
     }
 
     @Test
-    public void modificarSuperheroeTest(){
+    public void updateSuperheroeTest(){
         SuperHeroe superheroeModificar = new SuperHeroe("Peter Parker");
 
-        SuperHeroe personajeBackup = persistencia.obtenerSuperHeroe(superheroeModificar);
+        SuperHeroe superheroeBackup = persistencia.obtenerSuperHeroe(superheroeModificar);
 
         superheroeModificar = persistencia.obtenerSuperHeroe(superheroeModificar);
         superheroeModificar.setNombre(nombre);
         superheroeModificar.setGenero(genero);
         superheroeModificar.setPoderes(poderes);
 
-        persistencia.modificarPersonaje(superheroeModificar);
+        persistencia.updateHeroe(superheroeModificar);
 
         Assertions.assertEquals(superheroeModificar,
                 persistencia.obtenerSuperHeroe(superheroeModificar), error);
 
-        persistencia.modificarPersonaje(personajeBackup);
+        persistencia.updateHeroe(superheroeBackup);
     }
 
     @Test
