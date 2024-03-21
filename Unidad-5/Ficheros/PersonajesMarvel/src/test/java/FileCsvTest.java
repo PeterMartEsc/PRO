@@ -1,4 +1,3 @@
-import es.ies.puerto.file.FileCsv;
 import es.ies.puerto.file.FileJson;
 import es.ies.puerto.impl.SuperHeroe;
 import es.ies.puerto.interfaces.ICrudOperations;
@@ -10,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class FileJsonTest{
+public class FileCsvTest {
 
     String nombre = "Nombre nuevo";
     String alias = "alias nuevo";
