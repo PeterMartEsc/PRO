@@ -20,10 +20,7 @@ public class FileJson extends UtilidadesClass implements ICrudOperations {
     List<SuperHeroe> superheroes;
     String path="src/main/resources/data.json";
 
-    public FileJson(){
-
-    }
-    public FileJson(List<SuperHeroe> superheroes) {
+    public FileJson() {
         this.superheroes = new ArrayList<>();
     }
 

@@ -1,23 +1,28 @@
 package es.ies.puerto.impl;
 
 import es.ies.puerto.utilities.UtilidadesClass;
+import org.simpleframework.xml.Element;
+import org.simpleframework.xml.ElementList;
+import org.simpleframework.xml.Root;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+@Root(name="personaje")
 public class SuperHeroe extends UtilidadesClass {
 
-    private String alias;
-
+    @Element(name="nombre")
     private String nombre;
-
+    @Element(name="alias")
+    private String alias;
+    @Element(name="genero")
     private String genero;
-
+    @ElementList(name="poderes", entry = "poder")
     private List<String> poderes;
 
     public SuperHeroe(){
-
+        poderes = new ArrayList<>();
     }
 
     public SuperHeroe(String alias) {
@@ -50,6 +55,10 @@ public class SuperHeroe extends UtilidadesClass {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public void setAlias(String alias) {
+        this.alias = alias;
     }
 
     public void setGenero(String genero) {

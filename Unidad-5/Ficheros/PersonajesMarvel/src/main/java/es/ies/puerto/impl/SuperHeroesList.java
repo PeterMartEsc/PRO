@@ -8,22 +8,21 @@ import java.util.List;
 @Root(name = "personajes")
 public class SuperHeroesList {
 
-    @ElementList(inline = true)
+    @ElementList (inline = true)
     private List<SuperHeroe> superHeroes;
 
-    public SuperHeroesList(){
-
+    public SuperHeroesList() {
     }
 
-    public SuperHeroesList(List<SuperHeroe> superHeroes) {
+    public SuperHeroesList (List<SuperHeroe> superHeroes) {
         this.superHeroes = superHeroes;
     }
 
-    public List<SuperHeroe> getPersonas() {
+    public List<SuperHeroe> getSuperHeroes () {
         return superHeroes;
     }
 
-    public void setSuperHeroes(List<SuperHeroe> superHeroes) {
+    public void setSuperHeroes (List<SuperHeroe> superHeroes) {
         this.superHeroes = superHeroes;
     }
 

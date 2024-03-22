@@ -16,13 +16,6 @@ public class FileCsv extends UtilidadesClass implements ICrudOperations {
     List<SuperHeroe> superHeroes;
     String path="src/main/resources/data.csv";
 
-    public FileCsv(){
-
-    }
-
-    public FileCsv(List<SuperHeroe> superHeroes) {
-        this.superHeroes = new ArrayList<>();
-    }
 
     public List<SuperHeroe> obtenerSuperHeroes() {
 
@@ -37,8 +30,8 @@ public class FileCsv extends UtilidadesClass implements ICrudOperations {
 
                 if (contador > 0) {
                     String[] datos = linea.split(DELIMITADOR);
-                    String alias = datos[0];
-                    String nombre = datos[1];
+                    String nombre = datos[0];
+                    String alias = datos[1];
                     String genero = datos[2];
                     List<String> poderes = new ArrayList<>();
                     for(int i = 3; i < datos.length ; i++){
@@ -71,10 +64,10 @@ public class FileCsv extends UtilidadesClass implements ICrudOperations {
 
                 if (contador > 0) {
                     String[] datos = linea.split(DELIMITADOR);
-                    String alias = datos[0];
+                    String alias = datos[1];
 
                     if (alias == superHeroe.getAlias()) {
-                        String nombre = datos[1];
+                        String nombre = datos[0];
                         String genero = datos[2];
                         superHeroe.setNombre(nombre);
                         superHeroe.setGenero(genero);
