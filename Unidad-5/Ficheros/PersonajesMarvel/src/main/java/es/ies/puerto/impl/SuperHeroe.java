@@ -93,11 +93,10 @@ public class SuperHeroe extends UtilidadesClass {
     }
 
     public String toCsv() {
-        
-        String resultado = alias + DELIMITADOR + nombre + DELIMITADOR + genero + DELIMITADOR + "\n";
-        for(String poder : poderes){
-            
-        }
+        String poderesString = String.join(", ", poderes);
+        poderesString = poderesString.replace("\"", "");
+        String resultado = alias + DELIMITADOR + nombre + DELIMITADOR + genero + DELIMITADOR + "\"" +poderesString + "\n";
+
         return resultado;
     }
 }
