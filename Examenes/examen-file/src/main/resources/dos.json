@@ -1,0 +1,37 @@
+[
+  {
+    "id": "SG001",
+    "nombre": "Son Goku",
+    "serie": "Dragon Ball",
+    "poderEspecial": "Kamehameha",
+    "descripcion": "El guerrero saiyajin más fuerte del universo."
+  },
+  {
+    "id": "NU002",
+    "nombre": "Naruto Uzumaki",
+    "serie": "Naruto",
+    "poderEspecial": "Rasengan",
+    "descripcion": "Un ninja con el sueño de convertirse en el Hokage más grande."
+  },
+  {
+    "id": "ML003",
+    "nombre": "Monkey D. Luffy",
+    "serie": "One Piece",
+    "poderEspecial": "Gomu Gomu no Pistol",
+    "descripcion": "El capitán pirata que busca el One Piece."
+  },
+  {
+    "id": "SM004",
+    "nombre": "Sailor Moon",
+    "serie": "Sailor Moon",
+    "poderEspecial": "Moon Tiara Magic",
+    "descripcion": "Una chica ordinaria que se convierte en la guerrera Sailor Moon."
+  },
+  {
+    "id": "SU005",
+    "nombre": "Sasuke Uchiha",
+    "serie": "Naruto",
+    "poderEspecial": "Chidori",
+    "descripcion": "El último miembro del clan Uchiha, obsesionado con la venganza."
+  }
+]
