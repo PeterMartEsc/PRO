@@ -25,7 +25,6 @@ public class Conexion {
     public Connection getConexion() throws UsuarioException {
 
         try {
-            //Class.forName("org.sqlite.JDBC");
             this.con = DriverManager.getConnection(url);
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
