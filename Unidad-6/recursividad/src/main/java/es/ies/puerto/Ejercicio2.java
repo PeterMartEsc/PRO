@@ -3,6 +3,10 @@ package es.ies.puerto;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Escribe una función recursiva llamada cuentaRegresiva() que imprima los números del 10 al 1 en orden descendente.
+ * @author Pedro Martín Escuela
+ */
 public class Ejercicio2 {
 
     public List<Integer> cuentaDescencenteTradicional(int numero){

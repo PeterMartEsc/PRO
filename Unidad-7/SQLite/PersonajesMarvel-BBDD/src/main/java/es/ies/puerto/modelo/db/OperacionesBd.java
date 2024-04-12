@@ -90,28 +90,46 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
     }
 
     @Override
-    public List<Superheroe> obtenerSuperheroes() {
-
-        return null;
+    public Set<Superheroe> obtenerSuperheroes() throws SuperheroeException {
+        //Añadir poderes
+        String query = "SELECT p.nombre, p.alias, p.genero, FROM Personajes as p";
+        return obtener(query);
     }
 
     @Override
-    public Superheroe obtenerSuperheroe(Superheroe superHeroe) {
-        return null;
+    public Superheroe obtenerSuperheroe(Superheroe superHeroe) throws SuperheroeException {
+        //Añadir poderes
+        String query = "SELECT p.nombre, p.alias, p.genero, FROM Personajes as p" +
+                " WHERE p.alias='"+superHeroe.getAlias()+"'";
+        Set<Superheroe> lista = obtener(query);
+        if(lista.isEmpty()){
+            return null;
+        }
+
+        return lista.iterator().next();
     }
 
+    //Añadir poderes
     @Override
-    public void aniadirHeroe(Superheroe superheroe) {
-
+    public void aniadirHeroe(Superheroe superheroe) throws SuperheroeException {
+        String query = "INSERT INTO Personajes (nombre, alias, genero)" +
+                " VALUES ('"+superheroe.getNombre()+"', "+superheroe.getAlias()+", '"+superheroe.getGenero()+"')";
+        actualizar(query);
+    }
+    //Borrar poderes
+    @Override
+    public void borrarHeroe(Superheroe superheroe) throws SuperheroeException {
+        String query = "DELETE FROM Personajes as p" +
+                " where p.alias='"+superheroe.getAlias()+"'";
+        actualizar(query);
     }
 
+    //Actualizar poderes
     @Override
-    public void borrarHeroe(Superheroe superheroe) {
-
-    }
-
-    @Override
-    public void actualizarHeroe(Superheroe superheroe) {
-
+    public void actualizarHeroe(Superheroe superheroe) throws SuperheroeException {
+        String query = "UPDATE Personajes SET " +
+                "nombre='"+superheroe.getNombre()+"', " +
+                "genero='"+superheroe.getGenero()+"'";
+        actualizar(query);
     }
 }

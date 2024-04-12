@@ -1,19 +1,21 @@
 package es.ies.puerto.modelo.db.interfaces;
 
+import es.ies.puerto.exeption.SuperheroeException;
 import es.ies.puerto.modelo.Superheroe;
 
 import java.util.List;
+import java.util.Set;
 
 public interface ICrudOperaciones {
 
-    public List<Superheroe> obtenerSuperheroes();
+    public Set<Superheroe> obtenerSuperheroes() throws SuperheroeException;
 
-    public Superheroe obtenerSuperheroe(Superheroe superHeroe);
+    public Superheroe obtenerSuperheroe(Superheroe superHeroe) throws SuperheroeException;
 
-    public void aniadirHeroe(Superheroe superheroe);
+    public void aniadirHeroe(Superheroe superheroe) throws SuperheroeException;
 
-    public void borrarHeroe(Superheroe superheroe);
+    public void borrarHeroe(Superheroe superheroe) throws SuperheroeException;
 
-    public void actualizarHeroe(Superheroe superheroe);
+    public void actualizarHeroe(Superheroe superheroe) throws SuperheroeException;
 
 }

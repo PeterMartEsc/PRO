@@ -1,7 +1,7 @@
 package es.ies.puerto;
 
 /**
- * Escribe una función recursiva llamada cuentaRegresiva() que imprima los números del 10 al 1 en orden descendente.
+ * Escribe una función recursiva llamada factorial() para calcular el factorial de un número entero dado.
  * @author Pedro Martín Escuela
  */
 public class Ejercicio1 {
