@@ -15,13 +15,14 @@ CREATE TABLE IF NOT EXISTS PersonajesPoderes (
     idPoder INTEGER NOT NULL,
     FOREIGN KEY (idSuperheroe) REFERENCES Personajes(idSuperheroe),
     FOREIGN KEY (idPoder) REFERENCES Poderes(idPoder)
+    PRIMARY KEY (idSuperheroe, idPoder)
 );
 
 INSERT INTO Personajes (nombre, alias, genero) VALUES
     ('Iron Man', 'Tony Stark', 'Masculino'),
     ('Spider-Man', 'Peter Parker', 'Masculino');
 
-INSERT INTO Poderes (personaje_id, poder) VALUES
+INSERT INTO Poderes (poder) VALUES
     ('Vuelo'),
     ('Armadura tecnológica avanzada'),
     ('Rayos láser'),

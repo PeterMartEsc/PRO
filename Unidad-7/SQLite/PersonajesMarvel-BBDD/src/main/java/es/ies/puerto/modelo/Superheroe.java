@@ -5,23 +5,28 @@ import java.util.Objects;
 
 public class Superheroe {
 
+    private String id;
     private String nombre;
-
     private String alias;
-
     private String genero;
 
-    private List<String> poderes;
-
-    public Superheroe(String alias) {
-        this.alias = alias;
+    public Superheroe(String id) {
+        this.id = id;
     }
 
-    public Superheroe(String nombre, String alias, String genero, List<String> poderes) {
+    public Superheroe(String id, String nombre, String alias, String genero) {
+        this.id = id;
         this.nombre = nombre;
         this.alias = alias;
         this.genero = genero;
-        this.poderes = poderes;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -48,34 +53,26 @@ public class Superheroe {
         this.genero = genero;
     }
 
-    public List<String> getPoderes() {
-        return poderes;
-    }
-
-    public void setPoderes(List<String> poderes) {
-        this.poderes = poderes;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Superheroe that = (Superheroe) o;
-        return Objects.equals(alias, that.alias);
+        return Objects.equals(id, that.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(alias);
+        return Objects.hash(id);
     }
 
     @Override
     public String toString() {
         return "Superheroe{" +
-                "nombre='" + nombre + '\n' +
-                ", alias='" + alias + '\n' +
-                ", genero='" + genero + '\n' +
-                ", poderes=" + poderes +
+                "id='" + id + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", alias='" + alias + '\'' +
+                ", genero='" + genero + '\'' +
                 '}';
     }
 }
