@@ -158,8 +158,8 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
 
     @Override
     public void aniadirHeroe(Superheroe superheroe) throws SuperheroeException {
-        String query = "INSERT INTO Personajes (nombre, alias, genero)" +
-                " VALUES ('"+superheroe.getNombre()+"', '"+superheroe.getAlias()+"', '"+superheroe.getGenero()+"')";
+        String query = "INSERT INTO Personajes" +
+                " VALUES ('"+superheroe.getId()+"', '"+superheroe.getNombre()+"', '"+superheroe.getAlias()+"', '"+superheroe.getGenero()+"')";
         actualizar(query);
     }
 
@@ -188,13 +188,15 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
         String query = "UPDATE Personajes SET " +
                 "nombre='"+superheroe.getNombre()+"', " +
                 "alias='"+superheroe.getAlias()+"', " +
-                "genero='"+superheroe.getGenero()+"'";
+                "genero='"+superheroe.getGenero()+"' " +
+                "WHERE idSuperheroe= '"+superheroe.getId()+"'; ";
         actualizar(query);
     }
 
     public void actualizarPoder(Poder poder) throws SuperheroeException {
         String query = "UPDATE Poderes SET " +
-                "poder='"+poder.getPoder()+"'";
+                "poder='"+poder.getPoder()+"' " +
+                "WHERE idPoder='"+poder.getId()+"'; ";
         actualizar(query);
     }
 }

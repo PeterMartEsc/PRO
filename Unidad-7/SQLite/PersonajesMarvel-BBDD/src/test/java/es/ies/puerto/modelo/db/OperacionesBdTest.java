@@ -3,7 +3,6 @@ package es.ies.puerto.modelo.db;
 import es.ies.puerto.exeption.SuperheroeException;
 import es.ies.puerto.modelo.Poder;
 import es.ies.puerto.modelo.Superheroe;
-import es.ies.puerto.modelo.db.OperacionesBd;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,7 +24,7 @@ public class OperacionesBdTest {
         poder = new Poder("7", "Cuchillos Lunares");
     }
     @Test
-    public void obtenerUsuariosAllTest(){
+    public void obtenerPersonajesAllTest(){
         try {
             Set<Superheroe> lista = operacionesBd.obtenerSuperheroes();
             Assertions.assertEquals(2, lista.size(), MESSAGE_ERROR);
@@ -116,12 +115,14 @@ public class OperacionesBdTest {
 
     @Test
     public void actualizarUsuarioTest(){
+        String idUpdate = "3";
         String nombreUpdate = "Black Widow";
         String aliasUpdate = "Natasha Romanoff";
         String generoUpdate = "Femenino";
 
         try {
             operacionesBd.aniadirHeroe(superheroe);
+            superheroe.setId(idUpdate);
             superheroe.setNombre(nombreUpdate);
             superheroe.setAlias(aliasUpdate);
             superheroe.setGenero(generoUpdate);
