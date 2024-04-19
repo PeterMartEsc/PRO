@@ -28,9 +28,6 @@ public class Person implements Serializable {
 	private String name;
 	private Integer age;
 
-	@Column(name="color_ojos")
-	private String propiedad1;
-
 	public Integer getId() {
 		return id;
 	}
@@ -55,11 +52,4 @@ public class Person implements Serializable {
 		this.age = age;
 	}
 
-	public String getPropiedad1() {
-		return propiedad1;
-	}
-
-	public void setPropiedad1(String propiedad1) {
-		this.propiedad1 = propiedad1;
-	}
 }

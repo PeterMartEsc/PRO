@@ -1,26 +1,37 @@
 CREATE TABLE IF NOT EXISTS Personajes (
-    idSuperheroe INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    personajeId INTEGER PRIMARY KEY AUTOINCREMENT,
     nombre TEXT NOT NULL,
-    alias TEXT NOT NULL,
     genero TEXT
 );
 
+CREATE TABLE IF NOT EXISTS Alias (
+    aliasId INTEGER PRIMARY KEY AUTOINCREMENT,
+    personajeId INTEGER NOT NULL,
+    alias TEXT NOT NULL,
+    FOREIGN KEY(personajeId) REFERENCES Personajes(personajeId)
+);
+
 CREATE TABLE IF NOT EXISTS Poderes (
-    idPoder INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    poderId INTEGER PRIMARY KEY AUTOINCREMENT,
     poder TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS PersonajesPoderes (
-    idSuperheroe INTEGER NOT NULL,
-    idPoder INTEGER NOT NULL,
-    FOREIGN KEY (idSuperheroe) REFERENCES Personajes(idSuperheroe),
-    FOREIGN KEY (idPoder) REFERENCES Poderes(idPoder)
-    PRIMARY KEY (idSuperheroe, idPoder)
+    personajeId INTEGER,
+    poderId INTEGER,
+    PRIMARY KEY (personajeId, poderId),
+    FOREIGN KEY(personajeId) REFERENCES Personajes(personajeId),
+    FOREIGN KEY(poderId) REFERENCES Poderes(poderId)
 );
 
-INSERT INTO Personajes (nombre, alias, genero) VALUES
-    ('Iron Man', 'Tony Stark', 'Masculino'),
-    ('Spider-Man', 'Peter Parker', 'Masculino');
+-- Inserción de datos
+INSERT INTO Personajes (nombre, genero) VALUES
+    ('Iron Man', 'Masculino'),
+    ('Spider-Man', 'Masculino');
+
+INSERT INTO Alias (personajeId, alias) VALUES
+    (1, 'Tony Stark'),
+    (2, 'Peter Parker');
 
 INSERT INTO Poderes (poder) VALUES
     ('Vuelo'),
@@ -30,6 +41,10 @@ INSERT INTO Poderes (poder) VALUES
     ('Trepamuros'),
     ('Sentido arácnido');
 
-INSERT INTO PersonajesPoderes (idSuperheroe, idPoder) VALUES
-    (1,1),(1,2),(1,3),
-    (2,4),(2,5),(2,6);
+INSERT INTO PersonajesPoderes (personajeId, poderId) VALUES
+    (1, 1), -- Iron Man tiene Vuelo
+    (1, 2), -- Iron Man tiene Armadura tecnológica avanzada
+    (1, 3), -- Iron Man tiene Rayos láser
+    (2, 4), -- Spider-Man tiene Agilidad sobrehumana
+    (2, 5), -- Spider-Man tiene Trepamuros
+    (2, 6); -- Spider-Man tiene Sentido arácnido

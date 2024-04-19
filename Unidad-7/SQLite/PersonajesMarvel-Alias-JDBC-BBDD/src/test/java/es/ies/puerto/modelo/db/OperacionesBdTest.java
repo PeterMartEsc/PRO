@@ -20,8 +20,8 @@ public class OperacionesBdTest {
     @BeforeEach
     public void beforeEach(){
         operacionesBd = new OperacionesBd(urlBd);
-        superheroe = new Superheroe("3", "Moonknight", "Mark Spector", "Masculino");
         poder = new Poder("7", "Cuchillos Lunares");
+        superheroe = new Superheroe("3", "Moonknight", "Mark Spector", "Masculino", Set.of(poder));
     }
     @Test
     public void obtenerPersonajesAllTest(){
@@ -36,7 +36,7 @@ public class OperacionesBdTest {
     @Test
     public void obtenerPoderesAllTest(){
         try {
-            Set<Poder> lista = operacionesBd.obtenerPoderes();
+            Set<Poder> lista = operacionesBd.obtenerPoderes(superheroe);
             Assertions.assertEquals(6, lista.size(), MESSAGE_ERROR);
         } catch (SuperheroeException e) {
             Assertions.fail(e.getMessage());
@@ -44,7 +44,7 @@ public class OperacionesBdTest {
     }
 
     @Test
-    public void obtenerUsuarioTest(){
+    public void obtenerSuperheroeTest(){
 
         Superheroe superheroe = new Superheroe("1");
 
@@ -63,23 +63,6 @@ public class OperacionesBdTest {
     }
 
     @Test
-    public void obtenerPoderTest(){
-
-        Poder poder = new Poder("1");
-
-        try {
-
-            poder = operacionesBd.obtenerPoder(poder);
-            Assertions.assertNotNull(poder, MESSAGE_ERROR);
-            Assertions.assertNotNull(poder.getId(), MESSAGE_ERROR);
-            Assertions.assertNotNull(poder.getPoder(), MESSAGE_ERROR);
-
-        } catch (SuperheroeException e) {
-            Assertions.fail(e.getMessage());
-        }
-    }
-
-    @Test
     public void aniadirSuperheroeTest(){
 
         try {
@@ -87,7 +70,7 @@ public class OperacionesBdTest {
             operacionesBd.aniadirHeroe(superheroe);
             Superheroe superheroeObtenido = operacionesBd.obtenerSuperheroe(superheroe);
             Assertions.assertEquals(superheroe, superheroeObtenido, MESSAGE_ERROR);
-            operacionesBd.borrarHeroe(superheroeObtenido);
+            operacionesBd.borrarHeroe(superheroe);
             int numeroSuperheroesFinal = operacionesBd.obtenerSuperheroes().size();
             Assertions.assertEquals(numeroSuperheroes, numeroSuperheroesFinal, MESSAGE_ERROR);
 
@@ -97,35 +80,19 @@ public class OperacionesBdTest {
     }
 
     @Test
-    public void aniadirPoderTest(){
-
-        try {
-            int numeroPoderes = operacionesBd.obtenerPoderes().size();
-            operacionesBd.aniadirPoder(poder);
-            Poder poderObtenido = operacionesBd.obtenerPoder(poder);
-            Assertions.assertEquals(poder, poderObtenido, MESSAGE_ERROR);
-            operacionesBd.borrarPoder(poderObtenido);
-            int numeroPoderesFinal = operacionesBd.obtenerPoderes().size();
-            Assertions.assertEquals(numeroPoderes, numeroPoderesFinal, MESSAGE_ERROR);
-
-        } catch (SuperheroeException e) {
-            Assertions.fail(e.getMessage());
-        }
-    }
-
-    @Test
-    public void actualizarUsuarioTest(){
-        String idUpdate = "3";
+    public void actualizarSuperheroeTest(){
         String nombreUpdate = "Black Widow";
         String aliasUpdate = "Natasha Romanoff";
         String generoUpdate = "Femenino";
+        Poder poder1 = new Poder("7","a");
+        Set<Poder> poderes = Set.of(poder1);
 
         try {
             operacionesBd.aniadirHeroe(superheroe);
-            superheroe.setId(idUpdate);
             superheroe.setNombre(nombreUpdate);
             superheroe.setAlias(aliasUpdate);
             superheroe.setGenero(generoUpdate);
+            superheroe.setPoderes(poderes);
 
             operacionesBd.actualizarHeroe(superheroe);
 
@@ -134,28 +101,9 @@ public class OperacionesBdTest {
             Assertions.assertEquals(superheroe.getNombre(),superheroeEncontrado.getNombre(),MESSAGE_ERROR);
             Assertions.assertEquals(superheroe.getAlias(),superheroeEncontrado.getAlias(),MESSAGE_ERROR);
             Assertions.assertEquals(superheroe.getGenero(),superheroeEncontrado.getGenero(),MESSAGE_ERROR);
+            Assertions.assertEquals(superheroe.getPoderes(),superheroeEncontrado.getPoderes(),MESSAGE_ERROR);
+            operacionesBd.borrarHeroe(superheroe);
 
-            operacionesBd.borrarHeroe(superheroeEncontrado);
-        } catch (Exception exception) {
-            Assertions.fail(MESSAGE_ERROR+":"+exception.getMessage());
-        }
-    }
-
-    @Test
-    public void actualizarPoderTest(){
-        String poderUpdate = "Black Widow";
-
-        try {
-            operacionesBd.aniadirPoder(poder);
-            poder.setPoder(poderUpdate);
-
-            operacionesBd.actualizarPoder(poder);
-
-            Poder poderEncontrado = operacionesBd.obtenerPoder(poder);
-            Assertions.assertEquals(poder,poderEncontrado,MESSAGE_ERROR);
-            Assertions.assertEquals(poder.getPoder(),poderEncontrado.getPoder(),MESSAGE_ERROR);
-
-            operacionesBd.borrarPoder(poderEncontrado);
         } catch (Exception exception) {
             Assertions.fail(MESSAGE_ERROR+":"+exception.getMessage());
         }
