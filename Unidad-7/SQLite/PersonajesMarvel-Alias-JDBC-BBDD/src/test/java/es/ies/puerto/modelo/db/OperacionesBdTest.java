@@ -35,9 +35,10 @@ public class OperacionesBdTest {
 
     @Test
     public void obtenerPoderesAllTest(){
+        Superheroe superheroe = new Superheroe("1");
         try {
             Set<Poder> lista = operacionesBd.obtenerPoderes(superheroe);
-            Assertions.assertEquals(6, lista.size(), MESSAGE_ERROR);
+            Assertions.assertEquals(3, lista.size(), MESSAGE_ERROR);
         } catch (SuperheroeException e) {
             Assertions.fail(e.getMessage());
         }
@@ -84,7 +85,7 @@ public class OperacionesBdTest {
         String nombreUpdate = "Black Widow";
         String aliasUpdate = "Natasha Romanoff";
         String generoUpdate = "Femenino";
-        Poder poder1 = new Poder("7","a");
+        Poder poder1 = new Poder("7","Armas tecnológicas");
         Set<Poder> poderes = Set.of(poder1);
 
         try {

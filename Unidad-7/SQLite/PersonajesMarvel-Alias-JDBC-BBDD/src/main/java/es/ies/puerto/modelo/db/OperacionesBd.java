@@ -131,7 +131,7 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
 
     public Set<Poder> obtenerPoderes (Superheroe superheroe) throws SuperheroeException {
         String query = "SELECT p.idPoder, p.poder FROM Poderes as p " +
-                "INNER JOIN PersonajesPoderes as pp ON p.IdPoder = pp.idPoder " +
+                "INNER JOIN PersonajesPoderes as pp ON p.idPoder = pp.idPoder " +
                 "WHERE pp.idSuperheroe = " + superheroe.getId();
         return queryPoderes(query);
     }
@@ -155,6 +155,8 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
         actualizar(query);
         for (Poder poder : superheroe.getPoderes()) {
             aniadirPoder(poder);
+            String query2 = "INSERT INTO PersonajesPoderes VALUES ('" + superheroe.getId() + "', '" + poder.getId() + "');";
+            actualizar(query2);
         }
     }
 
@@ -171,6 +173,9 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
         actualizar(query);
         for(Poder poder : superheroe.getPoderes()){
             borrarPoder(poder);
+            String query2 = "DELETE FROM PersonajesPoderes " +
+                    "WHERE idSuperheroe='" + superheroe.getId()+"';";
+            actualizar(query2);
         }
     }
 
@@ -191,10 +196,12 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
         actualizar(query);
         for(Poder poder : superheroe.getPoderes()){
             actualizarPoder(poder);
+            String query2 = "UPDATE PersonajesPoderes SET " +
+                    "idPoder='" + poder.getId() + "' " +
+                    "WHERE idSuperheroe='" + superheroe.getId()+"';";
+            actualizar(query2);
         }
 
-        /**borrarHeroe(superheroe);
-        aniadirHeroe(superheroe);**/
     }
 
     public void actualizarPoder(Poder poder) throws SuperheroeException {
