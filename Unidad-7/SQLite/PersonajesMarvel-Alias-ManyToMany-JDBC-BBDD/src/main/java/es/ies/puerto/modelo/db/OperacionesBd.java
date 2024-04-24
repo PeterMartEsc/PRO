@@ -1,6 +1,7 @@
 package es.ies.puerto.modelo.db;
 
 import es.ies.puerto.exeption.SuperheroeException;
+import es.ies.puerto.modelo.Alias;
 import es.ies.puerto.modelo.Poder;
 import es.ies.puerto.modelo.Superheroe;
 import es.ies.puerto.modelo.db.interfaces.ICrudOperaciones;
@@ -61,12 +62,13 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
             while (rs.next()) {
                 String id = rs.getString("idSuperheroe");
                 String nombre = rs.getString("nombre");
-                String alias = rs.getString("alias");
+                Superheroe superheroeEx1 = new Superheroe(id);
+                Set<Alias> alias = obtenerAlias(superheroeEx1);
                 String genero = rs.getString("genero");
-                Superheroe superheroe = new Superheroe(id);
-                Set<Poder> poderes = obtenerPoderes(superheroe);
-                superheroe = new Superheroe(id,nombre,alias,genero, poderes);
-                lista.add(superheroe);
+                Superheroe superheroeEx2 = new Superheroe(id);
+                Set<Poder> poderes = obtenerPoderes(superheroeEx2);
+                superheroeEx2 = new Superheroe(id,nombre,alias,genero, poderes);
+                lista.add(superheroeEx2);
             }
         } catch (SQLException exception) {
             throw new SuperheroeException(exception.getMessage(), exception);
@@ -134,6 +136,12 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
                 "INNER JOIN PersonajesPoderes as pp ON p.idPoder = pp.idPoder " +
                 "WHERE pp.idSuperheroe = " + superheroe.getId();
         return queryPoderes(query);
+    }
+
+    public Set<Alias> obtenerAlias (Superheroe superheroe) throws SuperheroeException {
+        String query = "SELECT a.idAlias, a.Alias FROM Alias as a " +
+                "WHERE a.idSuperheroe = " + superheroe.getId();
+        return queryAlias(query);
     }
 
     @Override

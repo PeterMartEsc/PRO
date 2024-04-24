@@ -9,20 +9,22 @@ public class Superheroe {
 
     private String id;
     private String nombre;
-    private String alias;
+    private Set<Alias> alias;
     private String genero;
     private Set<Poder> poderes;
 
     public Superheroe() {
+        alias = new HashSet<>();
         poderes = new HashSet<>();
     }
 
     public Superheroe(String id) {
         this.id = id;
+        alias = new HashSet<>();
         poderes = new HashSet<>();
     }
 
-    public Superheroe(String id, String nombre, String alias, String genero, Set<Poder> poderes) {
+    public Superheroe(String id, String nombre, Set<Alias> alias, String genero, Set<Poder> poderes) {
         this.id = id;
         this.nombre = nombre;
         this.alias = alias;
@@ -42,11 +44,11 @@ public class Superheroe {
         this.nombre = nombre;
     }
 
-    public String getAlias() {
+    public Set<Alias> getAlias() {
         return alias;
     }
 
-    public void setAlias(String alias) {
+    public void setAlias(Set<Alias> alias) {
         this.alias = alias;
     }
 
