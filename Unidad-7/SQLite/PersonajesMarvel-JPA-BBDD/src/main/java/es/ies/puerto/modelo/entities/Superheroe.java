@@ -1,4 +1,4 @@
-package es.ies.puerto.modelo;
+package es.ies.puerto.modelo.entities;
 
 import javax.persistence.*;
 import java.util.*;
@@ -9,7 +9,7 @@ public class Superheroe {
 
     @Id
     @Column(name="personajeId")
-    private String id;
+    private int id;
     @Column(name="nombre")
     private String nombre;
     @ManyToOne
@@ -19,11 +19,11 @@ public class Superheroe {
     @ManyToMany
     private List<Poder> poderes;
 
-    public Superheroe(String id) {
+    public Superheroe(int id) {
         this.id = id;
     }
 
-    public Superheroe(String id, String nombre, Set<Alias> alias, String genero, List<Poder> poderes) {
+    public Superheroe(int id, String nombre, Set<Alias> alias, String genero, List<Poder> poderes) {
         this.id = id;
         this.nombre = nombre;
         this.alias = new HashSet<>();
@@ -31,11 +31,11 @@ public class Superheroe {
         this.poderes = new ArrayList<>();
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
