@@ -86,8 +86,9 @@ public class Superheroe {
         return "Superheroe{" +
                 "id='" + id + '\'' +
                 ", nombre='" + nombre + '\'' +
-                ", alias='" + alias + '\'' +
+                ", alias=" + alias + '\'' +
                 ", genero='" + genero + '\'' +
+                ", poderes=" + poderes +
                 '}';
     }
 }

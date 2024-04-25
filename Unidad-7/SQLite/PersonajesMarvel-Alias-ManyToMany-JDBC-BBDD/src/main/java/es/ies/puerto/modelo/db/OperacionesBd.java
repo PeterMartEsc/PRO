@@ -195,7 +195,7 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
     @Override
     public void aniadirHeroe(Superheroe superheroe) throws SuperheroeException {
         String query = "INSERT INTO Personajes" +
-                " VALUES ('"+superheroe.getId()+"', '"+superheroe.getNombre()+"', '"+superheroe.getAlias()+"', '"+superheroe.getGenero()+"')";
+                " VALUES ('"+superheroe.getId()+"', '"+superheroe.getNombre()+"', '"+superheroe.getGenero()+"')";
         actualizar(query);
         for (Alias alias : superheroe.getAlias()) {
             aniadirAlias(alias);
@@ -214,13 +214,12 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
     }
 
     public void aniadirAlias(Alias alias) throws SuperheroeException {
-        String query = "INSERT INTO Alias " +
+        String query = "INSERT INTO Alias (idAlias, idSuperheroe, alias)" +
                 " VALUES ('"+alias.getId()+"', '"+alias.getIdSuperheroe()+"', '"+alias.getAlias()+"')";
         actualizar(query);
     }
 
 
-    //Borrar Alias
     @Override
     public void borrarHeroe(Superheroe superheroe) throws SuperheroeException {
         String query = "DELETE FROM Personajes as p" +
@@ -232,6 +231,10 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
                     "WHERE idSuperheroe='" + superheroe.getId()+"';";
             actualizar(query2);
         }
+
+        for(Alias alias : superheroe.getAlias()){
+            borrarAlias(alias);
+        }
     }
 
     public void borrarPoder(Poder poder) throws SuperheroeException {
@@ -240,13 +243,16 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
         actualizar(query);
     }
 
-    //Actualizar Alias
+    public void borrarAlias(Alias alias) throws SuperheroeException {
+        String query = "DELETE FROM Alias as a" +
+                " where a.idAlias='"+alias.getId()+"'";
+        actualizar(query);
+    }
 
     @Override
     public void actualizarHeroe(Superheroe superheroe) throws SuperheroeException {
         String query = "UPDATE Personajes SET " +
                 "nombre='"+superheroe.getNombre()+"', " +
-                "alias='"+superheroe.getAlias()+"', " +
                 "genero='"+superheroe.getGenero()+"' " +
                 "WHERE idSuperheroe= '"+superheroe.getId()+"'; ";
         actualizar(query);
@@ -258,12 +264,23 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
             actualizar(query2);
         }
 
+        for(Alias alias : superheroe.getAlias()){
+            actualizarAlias(alias);
+        }
+
     }
 
     public void actualizarPoder(Poder poder) throws SuperheroeException {
         String query = "UPDATE Poderes SET " +
                 "poder='"+poder.getPoder()+"' " +
                 "WHERE idPoder='"+poder.getId()+"'; ";
+        actualizar(query);
+    }
+
+    public void actualizarAlias(Alias alias) throws SuperheroeException {
+        String query = "UPDATE Alias SET " +
+                "alias='"+alias.getAlias()+"' " +
+                "WHERE idAlias='"+alias.getId()+"'; ";
         actualizar(query);
     }
 }

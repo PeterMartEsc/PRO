@@ -1,12 +1,14 @@
 package es.ies.puerto.modelo.db;
 
 import es.ies.puerto.exeption.SuperheroeException;
+import es.ies.puerto.modelo.Alias;
 import es.ies.puerto.modelo.Poder;
 import es.ies.puerto.modelo.Superheroe;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class OperacionesBdTest {
@@ -16,12 +18,15 @@ public class OperacionesBdTest {
     String MESSAGE_ERROR = "NO SE HA OBTENIDO EL RESULTADO ESPERADO";
     Superheroe superheroe;
     Poder poder;
+    Alias alias;
+    Alias alias2;
 
     @BeforeEach
     public void beforeEach(){
         operacionesBd = new OperacionesBd(urlBd);
         poder = new Poder("7", "Cuchillos Lunares");
-        superheroe = new Superheroe("3", "Moonknight", "Mark Spector", "Masculino", Set.of(poder));
+        alias = new Alias("3", "3", "Mark Spector");
+        superheroe = new Superheroe("3", "Moonknight", Set.of(alias), "Masculino", Set.of(poder));
     }
     @Test
     public void obtenerPersonajesAllTest(){
@@ -57,6 +62,7 @@ public class OperacionesBdTest {
             Assertions.assertNotNull(superheroe.getNombre(), MESSAGE_ERROR);
             Assertions.assertNotNull(superheroe.getAlias(), MESSAGE_ERROR);
             Assertions.assertNotNull(superheroe.getGenero(), MESSAGE_ERROR);
+            Assertions.assertNotNull(superheroe.getPoderes(), MESSAGE_ERROR);
 
         } catch (SuperheroeException e) {
             Assertions.fail(e.getMessage());
@@ -83,15 +89,16 @@ public class OperacionesBdTest {
     @Test
     public void actualizarSuperheroeTest(){
         String nombreUpdate = "Black Widow";
-        String aliasUpdate = "Natasha Romanoff";
         String generoUpdate = "Femenino";
         Poder poder1 = new Poder("7","Armas tecnológicas");
+        Alias alias1 = new Alias("3", "3", "La Muerte Rusa");
+        Set<Alias> aliases = Set.of(alias1);
         Set<Poder> poderes = Set.of(poder1);
 
         try {
             operacionesBd.aniadirHeroe(superheroe);
             superheroe.setNombre(nombreUpdate);
-            superheroe.setAlias(aliasUpdate);
+            superheroe.setAlias(aliases);
             superheroe.setGenero(generoUpdate);
             superheroe.setPoderes(poderes);
 
