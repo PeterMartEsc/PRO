@@ -1,4 +1,4 @@
-package es.ies.puerto.modelo;
+package es.ies.puerto.modelo.entities;
 
 import javax.persistence.*;
 import java.util.List;
@@ -8,27 +8,27 @@ import java.util.Objects;
 public class Poder {
     @Id
     @Column(name="poderesId")
-    private String id;
+    private int id;
     @Column(name="poder")
     private String poder;
     @ManyToMany(mappedBy = "poderes")
     private List<Superheroe> superheroes;
 
-    public Poder(String id) {
+    public Poder(int id) {
         this.id = id;
     }
 
-    public Poder(String id, String poder, List<Superheroe> superheroes) {
+    public Poder(int id, String poder, List<Superheroe> superheroes) {
         this.id = id;
         this.poder = poder;
         this.superheroes = superheroes;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

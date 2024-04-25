@@ -1,4 +1,4 @@
-package es.ies.puerto.modelo;
+package es.ies.puerto.modelo.entities;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -8,27 +8,27 @@ import java.util.Objects;
 public class Alias {
     @Id
     @Column(name="aliasId")
-    private String id;
+    private int id;
     @OneToMany(mappedBy = "alias")
     private Superheroe superheroe;
     @Column(name="alias")
     private String alias;
 
-    public Alias(String id) {
+    public Alias(int id) {
         this.id = id;
     }
 
-    public Alias(String id, Superheroe superheroe, String alias) {
+    public Alias(int id, Superheroe superheroe, String alias) {
         this.id = id;
         this.superheroe = superheroe;
         this.alias = alias;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
