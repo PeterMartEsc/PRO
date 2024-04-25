@@ -6,11 +6,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class PersonTest {
+public class AlumnoTest {
 	static EntityManagerFactory emf;
 	EntityManager em;
 
-	Person person;
+	Alumno alumno;
 
 	@BeforeAll
 	public static void setUp() {
@@ -20,12 +20,12 @@ public class PersonTest {
 	@BeforeEach
 	public void initEntityManager() {
 		em = emf.createEntityManager();
-		person = new Person();
-		person.setName("personTest");
+		alumno = new Alumno();
+		alumno.setName("personTest");
 		try {
 			// Persist in database
 			em.getTransaction().begin();
-			em.persist(person);
+			em.persist(alumno);
 			em.getTransaction().commit();
 		} catch (Throwable e) {
 			Assertions.fail("Se ha producido un error:"+e.getMessage());
@@ -35,8 +35,8 @@ public class PersonTest {
 	@Test
 	public void testPersistFind() {
 		try {
-			Person personDB = em.find(Person.class, person.getId());
-			Assertions.assertEquals(person.getName(), personDB.getName());
+			Alumno alumnoDB = em.find(Alumno.class, alumno.getId());
+			Assertions.assertEquals(alumno.getName(), alumnoDB.getName());
 		} catch (Throwable e) {
 			Assertions.fail("Se ha producido un error:"+e.getMessage());
 		}
@@ -45,17 +45,17 @@ public class PersonTest {
 	@Test
 	public void testUpdate() {
 		try {
-			Person personFind = em.find(Person.class, person.getId()); // See file import.sql
-			personFind.setAge(22);
+			Alumno alumnoFind = em.find(Alumno.class, alumno.getId()); // See file import.sql
+			alumnoFind.setAge(22);
 
 			// Persist in database
 			em.getTransaction().begin();
-			em.merge(personFind);
+			em.merge(alumnoFind);
 			em.getTransaction().commit();
 
 			// Find by id
-			Person personDBUpdate = em.find(Person.class, person.getId());
-			Assertions.assertEquals(personFind.getAge(), personDBUpdate.getAge());
+			Alumno alumnoDBUpdate = em.find(Alumno.class, alumno.getId());
+			Assertions.assertEquals(alumnoFind.getAge(), alumnoDBUpdate.getAge());
 		} catch (Throwable e) {
 			e.printStackTrace();
 			Assertions.fail();
@@ -65,16 +65,16 @@ public class PersonTest {
 	@AfterEach
 	public void removePerson() {
 		try {
-			int personId = person.getId();
-			Person person = em.find(Person.class, personId); // See file import.sql
+			int personId = this.alumno.getId();
+			Alumno alumno = em.find(Alumno.class, personId); // See file import.sql
 			em.getTransaction().begin();
-			em.remove(person);
+			em.remove(alumno);
 			em.getTransaction().commit(); // TODO java.sql.SQLException: database is locked (sometimes)
 
 			// Find by id
-			Person personDB = em.find(Person.class, personId); // See file import.sql
+			Alumno alumnoDB = em.find(Alumno.class, personId); // See file import.sql
 
-			Assertions.assertNull(personDB);
+			Assertions.assertNull(alumnoDB);
 
 		} catch (Throwable e) {
 			e.printStackTrace();

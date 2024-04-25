@@ -6,15 +6,29 @@ public class Alias {
 
     private String id;
 
+    private String idSuperheroe;
     private String alias;
 
     public Alias(String id) {
         this.id = id;
     }
 
-    public Alias(String id, String alias) {
+    public Alias(String id, String idSuperheroe, String alias) {
         this.id = id;
+        this.idSuperheroe = idSuperheroe;
         this.alias = alias;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getIdSuperheroe() {
+        return idSuperheroe;
+    }
+
+    public void setIdSuperheroe(String idSuperheroe) {
+        this.idSuperheroe = idSuperheroe;
     }
 
     public String getAlias() {

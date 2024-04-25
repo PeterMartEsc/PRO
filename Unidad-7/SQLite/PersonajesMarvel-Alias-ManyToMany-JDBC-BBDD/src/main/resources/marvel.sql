@@ -1,8 +1,14 @@
 CREATE TABLE IF NOT EXISTS Personajes (
     idSuperheroe INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     nombre TEXT NOT NULL,
-    alias TEXT NOT NULL,
     genero TEXT
+);
+
+CREATE TABLE IF NOT EXISTS Alias (
+    idAlias INTEGER PRIMARY KEY AUTOINCREMENT,
+    idSuperheroe INTEGER NOT NULL,
+    alias TEXT NOT NULL,
+    FOREIGN KEY(idSuperheroe) REFERENCES Personajes(idSuperheroe)
 );
 
 CREATE TABLE IF NOT EXISTS Poderes (
@@ -18,9 +24,13 @@ CREATE TABLE IF NOT EXISTS PersonajesPoderes (
     PRIMARY KEY (idSuperheroe, idPoder)
 );
 
-INSERT INTO Personajes (nombre, alias, genero) VALUES
-    ('Iron Man', 'Tony Stark', 'Masculino'),
-    ('Spider-Man', 'Peter Parker', 'Masculino');
+INSERT INTO Personajes (nombre, genero) VALUES
+    ('Iron Man', 'Masculino'),
+    ('Spider-Man', 'Masculino');
+
+INSERT INTO Alias (idSuperheroe, alias) VALUES
+    ('1', 'Tony Stark'),
+    ('2', 'Peter Parker');
 
 INSERT INTO Poderes (poder) VALUES
     ('Vuelo'),

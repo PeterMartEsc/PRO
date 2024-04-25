@@ -62,13 +62,15 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
             while (rs.next()) {
                 String id = rs.getString("idSuperheroe");
                 String nombre = rs.getString("nombre");
+
                 Superheroe superheroeEx1 = new Superheroe(id);
+
                 Set<Alias> alias = obtenerAlias(superheroeEx1);
                 String genero = rs.getString("genero");
-                Superheroe superheroeEx2 = new Superheroe(id);
-                Set<Poder> poderes = obtenerPoderes(superheroeEx2);
-                superheroeEx2 = new Superheroe(id,nombre,alias,genero, poderes);
-                lista.add(superheroeEx2);
+                Set<Poder> poderes = obtenerPoderes(superheroeEx1);
+
+                superheroeEx1 = new Superheroe(id,nombre,alias,genero, poderes);
+                lista.add(superheroeEx1);
             }
         } catch (SQLException exception) {
             throw new SuperheroeException(exception.getMessage(), exception);
@@ -125,9 +127,43 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
         return lista;
     }
 
+    private Set<Alias> queryAlias (String query) throws SuperheroeException {
+        Set<Alias> lista = new HashSet<>();
+        ResultSet rs = null;
+        Statement statement = null;
+        try {
+            statement = getConexion().createStatement();
+            rs = statement.executeQuery(query);
+            while (rs.next()) {
+                String idAlias = rs.getString("idAlias");
+                String idSuperheroe = rs.getString("idSuperheroe");
+                String alias = rs.getString("alias");
+                Alias aliasX = new Alias(idAlias, idSuperheroe, alias);
+                lista.add(aliasX);
+            }
+        } catch (SQLException exception) {
+            throw new SuperheroeException(exception.getMessage(), exception);
+        } finally {
+            try {
+                if (rs != null && !rs.isClosed()) {
+                    rs.close();
+                }
+                if (statement != null && !statement.isClosed()) {
+                    statement.close();
+                }
+                if (getConexion() != null && !getConexion().isClosed()) {
+                    getConexion().close();
+                }
+            } catch (SQLException exception) {
+                throw new SuperheroeException(exception.getMessage(), exception);
+            }
+        }
+        return lista;
+    }
+
     @Override
     public Set<Superheroe> obtenerSuperheroes() throws SuperheroeException {
-        String query = "SELECT p.idSuperheroe, p.nombre, p.alias, p.genero FROM Personajes as p";
+        String query = "SELECT p.idSuperheroe, p.nombre, p.genero FROM Personajes as p";
         return obtener(query);
     }
 
@@ -139,14 +175,14 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
     }
 
     public Set<Alias> obtenerAlias (Superheroe superheroe) throws SuperheroeException {
-        String query = "SELECT a.idAlias, a.Alias FROM Alias as a " +
+        String query = "SELECT a.idAlias, a.idSuperheroe, a.alias FROM Alias as a " +
                 "WHERE a.idSuperheroe = " + superheroe.getId();
         return queryAlias(query);
     }
 
     @Override
     public Superheroe obtenerSuperheroe(Superheroe superHeroe) throws SuperheroeException {
-        String query = "SELECT p.idSuperheroe, p.nombre, p.alias, p.genero FROM Personajes as p" +
+        String query = "SELECT p.idSuperheroe, p.nombre, p.genero FROM Personajes as p" +
                 " WHERE p.idSuperheroe='"+superHeroe.getId()+"'";
         Set<Superheroe> lista = obtener(query);
         if(lista.isEmpty()){
@@ -161,6 +197,9 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
         String query = "INSERT INTO Personajes" +
                 " VALUES ('"+superheroe.getId()+"', '"+superheroe.getNombre()+"', '"+superheroe.getAlias()+"', '"+superheroe.getGenero()+"')";
         actualizar(query);
+        for (Alias alias : superheroe.getAlias()) {
+            aniadirAlias(alias);
+        }
         for (Poder poder : superheroe.getPoderes()) {
             aniadirPoder(poder);
             String query2 = "INSERT INTO PersonajesPoderes VALUES ('" + superheroe.getId() + "', '" + poder.getId() + "');";
@@ -174,6 +213,14 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
         actualizar(query);
     }
 
+    public void aniadirAlias(Alias alias) throws SuperheroeException {
+        String query = "INSERT INTO Alias " +
+                " VALUES ('"+alias.getId()+"', '"+alias.getIdSuperheroe()+"', '"+alias.getAlias()+"')";
+        actualizar(query);
+    }
+
+
+    //Borrar Alias
     @Override
     public void borrarHeroe(Superheroe superheroe) throws SuperheroeException {
         String query = "DELETE FROM Personajes as p" +
@@ -193,6 +240,7 @@ public class OperacionesBd extends Conexion implements ICrudOperaciones {
         actualizar(query);
     }
 
+    //Actualizar Alias
 
     @Override
     public void actualizarHeroe(Superheroe superheroe) throws SuperheroeException {
