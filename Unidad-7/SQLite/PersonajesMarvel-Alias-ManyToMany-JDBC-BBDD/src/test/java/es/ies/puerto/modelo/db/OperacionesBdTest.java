@@ -1,14 +1,13 @@
 package es.ies.puerto.modelo.db;
 
 import es.ies.puerto.exeption.SuperheroeException;
-import es.ies.puerto.modelo.Alias;
-import es.ies.puerto.modelo.Poder;
-import es.ies.puerto.modelo.Superheroe;
+import es.ies.puerto.modelo.entities.Alias;
+import es.ies.puerto.modelo.entities.Poder;
+import es.ies.puerto.modelo.entities.Superheroe;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.HashSet;
 import java.util.Set;
 
 public class OperacionesBdTest {
@@ -19,7 +18,6 @@ public class OperacionesBdTest {
     Superheroe superheroe;
     Poder poder;
     Alias alias;
-    Alias alias2;
 
     @BeforeEach
     public void beforeEach(){

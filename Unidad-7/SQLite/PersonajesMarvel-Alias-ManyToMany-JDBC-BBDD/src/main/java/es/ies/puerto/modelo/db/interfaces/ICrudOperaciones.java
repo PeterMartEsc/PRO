@@ -1,9 +1,8 @@
 package es.ies.puerto.modelo.db.interfaces;
 
 import es.ies.puerto.exeption.SuperheroeException;
-import es.ies.puerto.modelo.Superheroe;
+import es.ies.puerto.modelo.entities.Superheroe;
 
-import java.util.List;
 import java.util.Set;
 
 public interface ICrudOperaciones {

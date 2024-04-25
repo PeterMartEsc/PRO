@@ -1,16 +1,15 @@
 package es.ies.puerto.modelo.db;
 
 import es.ies.puerto.exeption.SuperheroeException;
-import es.ies.puerto.modelo.Alias;
-import es.ies.puerto.modelo.Poder;
-import es.ies.puerto.modelo.Superheroe;
+import es.ies.puerto.modelo.entities.Alias;
+import es.ies.puerto.modelo.entities.Poder;
+import es.ies.puerto.modelo.entities.Superheroe;
 import es.ies.puerto.modelo.db.interfaces.ICrudOperaciones;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class OperacionesBd extends Conexion implements ICrudOperaciones {

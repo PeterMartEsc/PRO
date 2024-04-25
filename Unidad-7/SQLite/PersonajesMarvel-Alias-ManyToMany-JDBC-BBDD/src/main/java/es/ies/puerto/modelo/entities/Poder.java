@@ -1,4 +1,4 @@
-package es.ies.puerto.modelo;
+package es.ies.puerto.modelo.entities;
 
 import java.util.Objects;
 
