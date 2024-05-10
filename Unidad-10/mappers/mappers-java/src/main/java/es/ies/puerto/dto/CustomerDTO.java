@@ -8,21 +8,21 @@ public class CustomerDTO implements Serializable {
     private Long id;
     private String FullName;
     private String country;
-    private String Address;
+    private String address;
     private String zipCode;
 
-    public CustomerDTO() {
-    }
+    public CustomerDTO() {}
 
     public CustomerDTO(Long id) {
         this.id = id;
     }
 
-    public CustomerDTO(Long id, String fullName, String country, String address, String zipCode) {
+    public CustomerDTO(Long id, String fullName, String country,
+                       String address, String zipCode) {
         this.id = id;
-        this.FullName = fullName;
+        FullName = fullName;
         this.country = country;
-        this.Address = address;
+        this.address = address;
         this.zipCode = zipCode;
     }
 
@@ -39,7 +39,7 @@ public class CustomerDTO implements Serializable {
     }
 
     public void setFullName(String fullName) {
-        this.FullName = fullName;
+        FullName = fullName;
     }
 
     public String getCountry() {
@@ -51,11 +51,11 @@ public class CustomerDTO implements Serializable {
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        this.Address = address;
+        this.address = address;
     }
 
     public String getZipCode() {
@@ -69,7 +69,7 @@ public class CustomerDTO implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof CustomerDTO)) return false;
         CustomerDTO that = (CustomerDTO) o;
         return Objects.equals(id, that.id);
     }
@@ -81,12 +81,10 @@ public class CustomerDTO implements Serializable {
 
     @Override
     public String toString() {
-        return "CustomerDTO{" +
-                "id=" + id + '\'' +
+        return "id=" + id +
                 ", FullName='" + FullName + '\'' +
                 ", country='" + country + '\'' +
-                ", Address='" + Address + '\'' +
-                ", zipCode='" + zipCode + '\'' +
-                '}';
+                ", Address='" + address + '\'' +
+                ", zipCode='" + zipCode;
     }
 }

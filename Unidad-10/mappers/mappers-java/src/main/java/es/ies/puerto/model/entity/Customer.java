@@ -1,7 +1,6 @@
 package es.ies.puerto.model.entity;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
 @Table(name="customers")
@@ -16,14 +15,11 @@ public class Customer {
     @Column(name="password")
     private String password;
 
-    public Customer() {
-    }
+    public Customer() {}
 
     public Customer(Long id) {
         this.id = id;
     }
-
-    //Se pone el constructor completo dependiendo de las necesidades
 
     public Long getId() {
         return id;
@@ -56,30 +52,4 @@ public class Customer {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Customer customer = (Customer) o;
-        return Objects.equals(id, customer.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
-
-    //No es necesario por que no va a llegar a nadie que pueda leerlo
-    /**
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "id=" + id +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
-    **/
 }

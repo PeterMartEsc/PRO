@@ -1,29 +1,24 @@
-package es.ies.puerto.model.entity;
+package es.ies.puerto.dto;
+
+import es.ies.puerto.model.entity.Customer;
 
 import javax.persistence.*;
+import java.util.Objects;
 
-@Entity
-@Table(name="address")
-public class Address {
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+public class AddressDTO {
+
     private Long id;
-    @ManyToMany()
-    @JoinColumn(name="fk_customer")
-    private Customer customer;
-    @Column(name="country")
     private String country;
-    @Column(name="address")
+
     private String address;
-    @Column(name="zipcode")
     private String zipCode;
 
-    @Column(name="provincia")
-    private String provincia;
+    private String isla;
 
-    public Address() {}
+    public AddressDTO() {
+    }
 
-    public Address(Long id) {
+    public AddressDTO(Long id) {
         this.id = id;
     }
 
@@ -35,13 +30,6 @@ public class Address {
         this.id = id;
     }
 
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
 
     public String getCountry() {
         return country;
@@ -67,11 +55,24 @@ public class Address {
         this.zipCode = zipCode;
     }
 
-    public String getProvincia() {
-        return provincia;
+    public String getIsla() {
+        return isla;
     }
 
-    public void setProvincia(String provincia) {
-        this.provincia = provincia;
+    public void setIsla(String isla) {
+        this.isla = isla;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof AddressDTO)) return false;
+        AddressDTO that = (AddressDTO) o;
+        return Objects.equals(id, that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
