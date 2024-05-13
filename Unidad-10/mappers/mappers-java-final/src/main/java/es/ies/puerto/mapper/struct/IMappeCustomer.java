@@ -15,17 +15,18 @@ public interface IMappeCustomer {
 
     IMappeCustomer INSTANCE = Mappers.getMapper( IMappeCustomer.class );
 
-    Customer customerDtoToCustomerEntity(CustomerDTO customerDTO);
+    Customer customerDtoToCustomerEntity(CustomerDTO customerDTO );
 
+    @Mapping(target = "address",source = "address")
+    @Mapping(target = "id",source = "customer.id")
+    @Mapping(target = "fullName",source = "customer",
+            qualifiedByName ="transformarNombre")
 
-    @Mapping(target = "address", source = "address")
-    @Mapping(target = "id", source = "customer.id")
-    @Mapping(target = "fullName", source = "customer",
-            qualifiedByName = "transformarNombre")
-    CustomerDTO customerToCustomerDTO(@Context Customer customer, Address address);
+    CustomerDTO customerToCustomerDTO(Address address, @Context Customer customer);
 
     @Named("transformarNombre")
-    public static String crearNombre(Customer customer){
-        return customer.getFirstname() + " " + customer.getLastname();
+    public static String crearNombre(Customer customer) {
+        return customer.getFirstname()+ " " + customer.getLastname();
     }
+
 }
