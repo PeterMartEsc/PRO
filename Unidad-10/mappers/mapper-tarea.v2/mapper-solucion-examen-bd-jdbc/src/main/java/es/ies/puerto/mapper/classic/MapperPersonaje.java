@@ -1,4 +1,4 @@
-package es.ies.puerto.mapper;
+package es.ies.puerto.mapper.classic;
 
 import es.ies.puerto.dto.PersonajeDto;
 import es.ies.puerto.modelo.db.entidades.Personaje;
