@@ -13,5 +13,5 @@ public interface IMapperPoder {
 
     PoderDto poderEntityToPoderDTO(Poder poder);
 
-    Equipamiento poderEntityToPoderDTO(EquipamientoDto equipamientoDto);
+    Poder poderEntityToPoderDTO(PoderDto poderDTO);
 }
