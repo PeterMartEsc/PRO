@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.8.2
+Built-By: jpexposito
+Build-Jdk: 11.0.11
+
