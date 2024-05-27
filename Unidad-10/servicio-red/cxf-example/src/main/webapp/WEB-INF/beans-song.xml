@@ -7,7 +7,7 @@
 
     <jaxrs:server id="songService" address="/">
         <jaxrs:serviceBeans>
-            <bean id="songsBean" class="es.ies.puerto.services.SongServiceTest"/>
+            <bean id="songsBean" class="es.ies.puerto.services.SongService"/>
         </jaxrs:serviceBeans>
 
         <jaxrs:providers>
